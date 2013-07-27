@@ -41,6 +41,7 @@ a {
 	max-width: 450px;
 	height: auto;
 	padding: 10px;
+	display: block;
 	clear: both;
 }
 .pagination {
