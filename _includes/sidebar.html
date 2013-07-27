@@ -9,23 +9,24 @@
 	      <li id="home"><a href="/">Home</a></li>
 	      <li id="about"><a href="/about/">About</a></li>
 	    </ul>	
-		
 		<br>
+		<table class="table-info" align="center">
+			<tr>
+				<td><a class="social-icon" id="twitter" title="Twitter" target="_blank" href="http://www.twitter.com/antoniocapelo" alt="Twitter"><span style="display:none">twitter</span></a> </td>
+				<td><a class="social-icon" id="github" title="GitHub" target="_blank" href="http://github.com/antoniocapelo" alt="GitHub"><span style="display:none">github</span></a></td>
+				<td><a class="social-icon" id="googleplus" title="Google+" target="_blank" href="https://plus.google.com/108881262271506526275/posts" alt="Google Plus"><span style="display:none">googleplus</span></a></td>
+				<td><a class="social-icon" id="instagram" title="Instagram" target="_blank" href="http://www.instagram.com/acapelo"><span style="display:none">instagram</span></a></td>
+			</tr>
 
-		<h3>Recent Posts</h3>
-		<ul style="display:block;">
-		{% for post in site.posts limit: 5%}
-			<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-		{% endfor %}
-		</ul>
+		</table>
 
-		<ul id="social-icons">
-			<li><a id="twitter" href="#"><span style="display:none">twitter</span></a></li>
-			<li><a id="github" href="#"><span style="display:none">github</span></a></li>
-			<li><a id="googleplus" href="#"><span style="display:none">googleplus</span></a></li>
-			<li><a id="instagram" href="#"><span style="display:none">instagram</span></a></li>
-
-		</ul>
+		<!-- <div class="social-icons">
+			<a class="social-icon" id="twitter" title="Twitter" target="_blank" href="http://www.twitter.com/antoniocapelo" alt="Twitter"><span style="display:none">twitter</span></a>
+			<a class="social-icon" id="github" title="GitHub" target="_blank" href="http://github.com/antoniocapelo" alt="GitHub"><span style="display:none">github</span></a>
+			<a class="social-icon" id="googleplus" title="Google+" target="_blank" href="https://plus.google.com/108881262271506526275/posts" alt="Google Plus"><span style="display:none">googleplus</span></a>
+			<a class="social-icon" id="instagram" title="Instagram" target="_blank" href="http://www.instagram.com/acapelo"><span style="display:none">instagram</span></a>
+		</div> -->
+	<div id="footer">Personal Blog .  <a style="font-size:100%" href="www.antoniocapelo.com" title="antoniocapelo.com">António Capelo</a> . {{ site.time | date: '%Y' }}</div>
 	</div>
-	<footer> Info de footer</footer>
 </div>
+<div class="myclearfix"></div>

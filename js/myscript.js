@@ -32,4 +32,12 @@ $(document).ready(function() {
 		var s = document.getElementsByTagName('script')[0];
 		s.parentNode.insertBefore(po, s);
 	})();
+
+	$('.social-icon').on('mouseenter',function() {
+		$(this).animate({'background-position-y':'-40px'},500);
+	})
+
+	$('.social-icon').on('mouseleave',function() {
+		$(this).animate({'background-position-y':'0px'},500);
+	})
 })
