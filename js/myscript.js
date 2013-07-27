@@ -4,15 +4,15 @@ $(document).ready(function() {
 		uri = '/home/';
 	}
 
-	$('ul.nav').children().each(function() {
+	$('.info>ul').children().each(function() {
 		var id = '/' + ($(this).attr('id')) + '/';
 		if('/' + $(this).attr('id') + '/' === uri)
 		{
-			$(this).addClass('active');	
+			$(this).addClass('activa');	
 		}
 		else
 		{
-			$(this).removeClass('active');
+			$(this).removeClass('activa');
 		}
 	});
 

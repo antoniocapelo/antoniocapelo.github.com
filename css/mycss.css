@@ -1,3 +1,94 @@
+/* Main Section */
+body,html{
+  height:100%;
+}
+
+body {
+	font-family: 'Roboto',"Helvetica Neue",Helvetica,Arial,sans-serif;;	
+}
+
+body, h1, h2, h3, h4, h5, p {
+	font-weight: 300;
+}
+
+.sidebar-nav-fixed{
+	margin-left: -20px;
+	top: 0;
+	width: 25%;
+	background-color: #66C477;
+	color: #efefef;
+	text-align: center;
+	height: 100%;
+}
+
+
+.cover {
+	margin-top: 0px;
+	background-image: url('/img/back.jpg');
+	background-size: auto 100%;
+	background-position: 85% 75%;
+	height: 50%;
+}
+
+.info {
+	border-top: 5px solid #fff;
+	padding: 10px;
+}
+
+.info h3 {
+	padding: 0px;
+	margin-bottom: 0px;
+}
+
+.info ul {
+	list-style-type: none;
+	display: inline;
+}
+
+.info ul li {
+	display: inline;
+	padding: 5px;
+}
+
+.info a:hover {
+	font-size: 120%;
+	color: #595959;
+	text-decoration: none;
+}
+
+.info a {
+	font-size: 120%;
+	color: #EFEFEF;
+}
+
+.info .activa a{
+	font-size: 120%;
+	color: #595959;
+}
+.divider {
+	clear: both;
+	text-align: center;
+	margin: 20px 0;
+	border-top: 1px solid #E2E2E2;
+}
+
+.content {
+	padding: 10px;
+}
+
+.row-fluid .controls-row [class*="span"] .nospace {
+	margin-left:0px;
+}
+
+footer {
+    clear:both;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    bottom: 10px;
+}
+
 /* Social Section */
 .socialshare {
 	list-style-type: none;
@@ -8,4 +99,38 @@
 .socialshare li {
 	display: inline;
 	float: left;
+}
+
+#social-icons {
+	width: 100%;
+	text-align: center;
+}
+
+#social-icons>li>a {
+	margin-right: 10px;
+}
+
+
+#twitter {
+	background: url('../img/icons/twitter_on.png') no-repeat;
+}
+
+#github {
+	background: url('../img/icons/git_on.png') top left no-repeat;
+}
+
+#googleplus {
+	background: url('../img/icons/google_on.png') top left no-repeat;
+}
+
+#instagram {
+	background: url('../img/icons/insta_on.png') top left no-repeat;
+
+}
+#twitter, #github, #googleplus, #instagram {
+	display: block; 
+	background-size: 40px 40px;
+	height: 40px;
+	float: left;
+	width: 40px;
 }
