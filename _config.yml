@@ -1,0 +1,5 @@
+name: "Capelo is blogging"
+description: "thoughts on coding / sampling / analog photography / rest of life"
+markdown: redcarpet
+pygments: true
+paginate: 2

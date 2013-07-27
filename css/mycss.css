@@ -1,0 +1,11 @@
+/* Social Section */
+.socialshare {
+	list-style-type: none;
+	display: inline;
+	padding: 20px;
+}
+
+.socialshare li {
+	display: inline;
+	float: left;
+}

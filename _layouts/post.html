@@ -1,0 +1,25 @@
+{% include header.html %}
+
+<div class="row-fluid">
+	<div class="span8">
+		<h1>{{ page.title }}</h1>
+		<p class="muted"> {{ page.date | date_to_long_string }}</p>
+		{{ content }}
+		
+		
+		<!-- Social Media -->
+		<br>
+		<ul class="socialshare">
+			<!-- Twitter -->
+			<li><a href="https://twitter.com/share" class="twitter-share-button" data-via="antoniocapelo">Tweet</a></li>
+			<!-- Google + -->
+			<li><p><g:plusone size="medium"></g:plusone></p></li>
+		</ul>
+		
+
+	</div>
+	<div class="span4">
+		{% include sidebar.html %}
+	</div>
+</div>
+{% include footer.html %}
