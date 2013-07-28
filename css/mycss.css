@@ -15,6 +15,9 @@ a {
 	color:#2E6231;
 }
 
+code {
+	color: #2E6231
+}
 .span9 a:hover, a:focus {
 	color: #efefef;
 	text-decoration: none;
@@ -40,6 +43,20 @@ a {
 .post img {
 	max-width: 450px;
 	height: auto;
+	max-height: 500px;
+	padding: 10px;
+	display: block;
+	clear: both;
+}
+
+.post a {
+	font-weight: 400;
+}
+
+.small {
+	max-width: 250px;
+	height: auto;
+	max-height: 250px;
 	padding: 10px;
 	display: block;
 	clear: both;
@@ -206,7 +223,7 @@ a {
 	.cover {
 	margin-top: 0px;
 	background-image: url('/img/back.jpg');
-	background-size: 80% auto;
+	background-size: 100% auto;
 	background-position: 85% 75%;
 	height: 50%;
 	}
@@ -233,6 +250,15 @@ a {
 	.nospace {
 		padding-left: 10px;
 		padding-right: 10px;
+	}
+
+	.post img {
+		max-width: 80%;
+		height: auto;
+		max-height: 500px;
+		padding: 10px;
+		display: block;
+		clear: both;
 	}
 
 	h1, h2, h3 {
