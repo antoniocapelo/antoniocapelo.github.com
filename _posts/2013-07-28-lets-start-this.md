@@ -9,15 +9,15 @@ categories: "jekyll"
 I just can't start a blog and not post immediatly. So here we go...
 (Currently listening to <a href="http://open.spotify.com/track/4Ypxolb6A0oCPe9NqhFYdV">Mos Def - The Panties</a> so pardon me if I get too mellow :P )
 
-It was yesterday that I decided to stop blogging on the WP platform. My previous blog, which has a couple of years, survived one hosting transfer, two or three customized themes and gave me all the joys a blog should give. But I was feeling that the need of something new, where I could experiment more, without having to learn all the inner mechanics of the wordpress (I really don't have the time right now, too much stuff on my 'to learn' queue). I also have read about <a href="http://jekyllrb.com/" title="Jekyll site">Jekyll</a> and it made me curious by its simplicity + flexibility. Well, and the idea to post from the terminal is very cool. I admit.
+It was yesterday that I decided to stop blogging on the WP platform. My previous blog, which has a couple of years, survived one hosting transfer, two or three customized themes and gave me all the joys a blog should give. But I was feeling that the need of something new, where I could experiment more, without having to learn all the inner mechanics of Wordpress (I really don't have the time right now, too much stuff on my 'to learn' queue). I also have read about <a href="http://jekyllrb.com/" title="Jekyll site">Jekyll</a> and it made me curious by its simplicity + flexibility. Well, and the idea to post from the terminal is very cool. I admit.
 
 Besides that, I decided that this summer I should hang out on GitHub, follow nice repos and learn more, that's about time! I had a GiT workshop on college and read a lot about it, but when one doesn't practice, all that knowledge gets rusty and I don't like it.
 
 So, yesterday when I was setting foot outside the door to workout and it began to rain, I decided the time had come. It took me part of the morning and afternoon to read some documentation, blog posts about the system, some stack overflow Q&A and CSS tweaking.
 
-For those who don't know, Jekyll is a static site generator, oriented to blog-like websites. It's written on Ruby by Tom Preston Werner (GitHub co-founder). Basically, it takes Markdown, Liquid Markup and a template structure, it processes all of the data and outputs a static site, ready for deployment. All this (plus no database queries) result in a quicker site and we all like speed, right?
+For those who don't know, <a href="http://jekyllrb.com/">Jekyll</a> is a static site generator, oriented to blog-like websites. It's written on Ruby by Tom Preston Werner (GitHub co-founder). Basically, it takes Markdown, Liquid Markup and a template structure, it processes all of the data and outputs a static site, ready for deployment. All this (plus no database queries) result in a quicker site and we all like speed, right?
 
-Some stuff I read:
+Some stuff I read along the way:
 
 * <a href="http://hugogiraudel.com/2013/02/21/jekyll/#why">Why Jekyll</a> by Hugo Giraudel
 * <a href="https://help.github.com/articles/using-jekyll-with-pages">Using Jekyll with GitHub Pages</a>	
@@ -30,16 +30,16 @@ Plus a cute website that lists the main git commands in a simple way: <a href="h
 I think it's appropriate to write a short guide on how to start with Jekyll, it may be usefull for some people (even myself, in case I need to reset something). I'll try to sum up the main steps of it, which you can find scattered on these previous links:
 
 ##1. GitHub Stuff
-Setup a GitHub account if you don't have one: it's simple and free! Create a repository named **yourusername.github.com** and that's it. 
+Setup a GitHub account if you don't have one: it's simple and free! If you want GitHub Pages to host your site, you'll have to create a repository named **yourusername.github.com** and that's it. 
 
 Keep in mind that it's not mandatory to host the blog on github pages: you can build your site with jekyll and then FTP it to your own server. But remember that GitHub Pages is built on Jekyll, so you can push *raw* jekyll files to your repo and GitHub will do the compilation for you, which is pretty cool.
 
 ##2. Install Ruby
-If you're on a mac, your computer should probably ship with ruby installed (ruby 1.8.7) and jekyll should run with it. Nevertheless, you will still have to install XCode Comand Line Tools for it to work.
+If you're on a mac, your computer probably came with ruby installed (ruby 1.8.7) and jekyll should run with it. Nevertheless, you will still have to install XCode Comand Line Tools for it to work.
 
 In case you want a newer ruby version, so you can use ruby on rails for example, this <a href="http://createdbypete.com/articles/ruby-on-rails-development-with-mac-os-x-mountain-lion/">link</a> provides a nice guide on how to get the latest Ruby version running. It envolves installing the XCode Comand Line Tools, HomeBrew and <a href="https://github.com/sstephenson/rbenv">rbenv</a>. I made it a little different, decided to use the <a href="https://rvm.io/">Ruby Version Manager</a> in order to install a new version and choose which version to used by default. 
 
-The rest of the OS's, check out <a href="http://www.ruby-lang.org/en/"> this</a> and you'll find proper instructions.
+The rest of the OS's, visit <a href="http://www.ruby-lang.org/en/"> this link</a> where you'll find proper instructions.
 
 ##3. Install Jekyll
 All you got to do is bring up a command line and
@@ -51,7 +51,7 @@ Create a folder for you site on a path of your choosing and just type `jekyll` w
 Here's a quick description of the main files/folders created:
 
 ### _config.yml
-This file holds your site configuration variables. It should be like this:
+This file holds your site configuration variables. You should end upd with something like this:
 
 	name: "site name"`
 	description: "site desc"
@@ -61,7 +61,8 @@ This file holds your site configuration variables. It should be like this:
 	url: https://github.com/username/username.github.com/blob/master
 
 ### _includes
-This directory holds all the html *snippets* you will include in your layouts in the future. It'll store files with the html code your site reuses on every load, like menubar.html, header.html, footer.html, etc.
+This directory holds all the html *snippets* you will need include in your layouts in the future. Basically, It'll store files with the html code your site reuses on every load, like menubar.html, header.html, footer.html, etc.
+Example:
 
 {% raw %}
 
@@ -96,7 +97,7 @@ As you can see, you can use Liquid Markup to display html conditionally: I'm che
 
 
 ### _layouts
-Each page on your site needs to specify which layout it should use (more on that later). A layout is a .html file with the structure of your page. Keep in mind that layouts on jekyll use Liquid Markup, so a layout example can be something like:
+Each page on your site needs to have specified which layout it should use (more on that later). A layout is a .html file with the structure of your page. Keep in mind that layouts on jekyll use Liquid Markup, so a layout example can be something like:
 
 {% raw %}
 	{% include header.html %}
@@ -109,14 +110,12 @@ Each page on your site needs to specify which layout it should use (more on that
 	  <div class="span9 nospace">
 	    {{ content }}
 	  </div>
-
-
 	</div>
 	{% include footer.html %}
 {% endraw %}
 
 ### _posts
-This folder you hold all your blog posts. Every post you create has to be named **YYYY-MM-DD-your-post-title** and have a <a href="http://jekyllrb.com/docs/frontmatter/">YAML Front Matter</a> which should specify, at least, the post layout.
+This folder will hold all your blog posts. Each post is represented by a markdown file, has to be named **YYYY-MM-DD-your-post-title** and have a <a href="http://jekyllrb.com/docs/frontmatter/">YAML Front Matter</a> which should specify, at least, the post layout.
 
 Every info you specify on the Front Matter can then be accessed as a **page.property**. 
 
@@ -153,10 +152,6 @@ If you are new to this, you should totally get to know this awesome framework an
 <img src="http://cdn.kveller.com/blog/wp-content/uploads/2012/01/shutterstock_83131060-300x258.jpg">
 Above is a cute photo. I intend to gain your sympathy with it.
 
-See ya soon
+See ya soon!
 
-
-
-
-
-
+*A. Capelo*

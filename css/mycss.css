@@ -4,7 +4,9 @@ body,html{
 }
 
 body {
-	font-family: 'Roboto',"Helvetica Neue",Helvetica,Arial,sans-serif;;	
+	font-family: 'Roboto',"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 90%;
+	line-height: 26px;
 }
 
 body, h1, h2, h3, h4, h5, p {
@@ -49,7 +51,29 @@ code {
 	clear: both;
 }
 
-.post a {
+.static img {
+	max-width: 450px;
+	height: auto;
+	float: left;
+	max-height: 500px;
+	padding: 0px 10px 10px 10px;
+	display: block;
+	clear: both;
+}
+
+.static h1 {
+	margin-bottom: 20px;
+}
+
+.static {
+	font-size: 110%;
+}
+
+.static ul li {
+	list-style-type: square;
+	padding: 5px 0px 5px 0px;
+}
+.post a, .static a{
 	font-weight: 400;
 }
 
@@ -277,6 +301,10 @@ code {
 
 	.pagination {
 		text-align: center;
+	}
+
+	.static img {
+		float: none;
 	}
 
 }
