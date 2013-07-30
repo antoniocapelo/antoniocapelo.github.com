@@ -1,4 +1,5 @@
-/* Main Section */
+/* Main */
+
 body,html{
   height:100%;
 }
@@ -26,6 +27,23 @@ code {
 	background-color: black;
 }
 
+.divider {
+	clear: both;
+	text-align: center;
+	margin: 20px 0;
+	border-top: 1px solid #E2E2E2;
+}
+
+.content {
+	padding: 10px;
+}
+
+.row-fluid .controls-row [class*="span"] .nospace {
+	margin-left:0px;
+}
+
+/* Side Bar */
+
 .sidebar-nav-fixed{
 	margin-left: -20px;
 	top: 0;
@@ -34,64 +52,6 @@ code {
 	color: #efefef;
 	text-align: center;
 	height: 100%;
-}
-
-.coverpic {
-	max-width: 400px;
-	height: auto;
-	padding: 5px;
-}
-
-.post img {
-	max-width: 450px;
-	height: auto;
-	max-height: 500px;
-	padding: 10px;
-	display: block;
-	clear: both;
-}
-
-.static img {
-	max-width: 450px;
-	height: auto;
-	float: left;
-	max-height: 500px;
-	padding: 0px 10px 10px 10px;
-	display: block;
-	clear: both;
-}
-
-.static h1 {
-	margin-bottom: 20px;
-}
-
-.static {
-	font-size: 110%;
-}
-
-.static ul li {
-	list-style-type: square;
-	padding: 5px 0px 5px 0px;
-}
-.post a, .static a{
-	font-weight: 400;
-}
-
-.small {
-	max-width: 250px;
-	height: auto;
-	max-height: 250px;
-	padding: 10px;
-	display: block;
-	clear: both;
-}
-.pagination {
-	font-weight: 300;
-}
-
-.pagination a:hover, a:focus {
-	color: #595959;
-	text-decoration: none;
 }
 
 .cover {
@@ -138,20 +98,6 @@ code {
 	font-size: 120%;
 	color: #595959;
 }
-.divider {
-	clear: both;
-	text-align: center;
-	margin: 20px 0;
-	border-top: 1px solid #E2E2E2;
-}
-
-.content {
-	padding: 10px;
-}
-
-.row-fluid .controls-row [class*="span"] .nospace {
-	margin-left:0px;
-}
 
 #footer {
     clear:both;
@@ -163,6 +109,75 @@ code {
     margin-top: 20px;
     padding-top: 10px;
 	border-top: 1px dotted #E2E2E2;
+}
+
+#twitter {
+	background: url('../img/icons/twitter.png') top left no-repeat;
+}
+
+#github {
+	background: url('../img/icons/github.png') top left no-repeat;
+}
+
+#googleplus {
+	background: url('../img/icons/googleplus.png') top left no-repeat;
+}
+
+#instagram {
+	background: url('../img/icons/instagram.png') top left no-repeat;
+}
+
+#twitter, #github, #googleplus, #instagram {
+	background-size: 40px 80px;
+	height: 40px;
+	float: left;
+	width: 40px;
+}
+
+.table-info {
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+/* Default Layout */
+
+.coverpic {
+	max-width: 400px;
+	height: auto;
+	padding: 5px;
+}
+
+.pagination {
+	font-weight: 300;
+}
+
+.pagination a:hover, a:focus {
+	color: #595959;
+	text-decoration: none;
+}
+
+/* Post Layout */
+
+.post a, .static a{
+	font-weight: 400;
+}
+
+.post img {
+	max-width: 450px;
+	height: auto;
+	max-height: 500px;
+	padding: 10px;
+	display: block;
+	clear: both;
+}
+
+.small {
+	max-width: 250px;
+	height: auto;
+	max-height: 250px;
+	padding: 10px;
+	display: block;
+	clear: both;
 }
 
 /* Social Section */
@@ -196,41 +211,42 @@ code {
 	margin-right: 0px;
 }
 
-.table-info {
-	margin-top:10px;
-	margin-bottom:10px;
-}
+/* Static Layout */
 
-#twitter {
-	background: url('../img/icons/twitter.png') top left no-repeat;
-}
-
-#github {
-	background: url('../img/icons/github.png') top left no-repeat;
-}
-
-#googleplus {
-	background: url('../img/icons/googleplus.png') top left no-repeat;
-}
-
-#instagram {
-	background: url('../img/icons/instagram.png') top left no-repeat;
-}
-
-
-#twitter, #github, #googleplus, #instagram {
-	background-size: 40px 80px;
-	height: 40px;
+.static img {
+	max-width: 450px;
+	height: auto;
 	float: left;
-	width: 40px;
+	max-height: 500px;
+	padding: 0px 10px 10px 10px;
+	display: block;
+	clear: both;
 }
 
+.static h1 {
+	margin-bottom: 20px;
+}
+
+.static {
+	font-size: 110%;
+}
+
+.static ul li {
+	list-style-type: square;
+	padding: 5px 0px 5px 0px;
+}
+
+/* Responsive Stuff */
 
 @media (max-width: 767px) {
 
 	body {
 		padding-left: 0;
 		padding-right: 0;
+	}
+
+	h1, h2, h3 {
+		line-height: 35px;
 	}
 
 	.sidebar-nav-fixed{
@@ -276,17 +292,13 @@ code {
 		padding-right: 10px;
 	}
 
-	.post img {
+	.post img, .coverpic {
 		max-width: 80%;
 		height: auto;
 		max-height: 500px;
 		padding: 10px;
 		display: block;
 		clear: both;
-	}
-
-	h1, h2, h3 {
-		line-height: 35px;
 	}
 
 	.info {
@@ -306,6 +318,5 @@ code {
 	.static img {
 		float: none;
 	}
-
 }
 
