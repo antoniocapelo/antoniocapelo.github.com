@@ -2,14 +2,14 @@
 layout: default
 title: Drop the Posts
 ---
-<h1>Drop the <span style="text-decoration:line-through">Bass</span> Post</h1>
+<h1>Drop the <span style="text-decoration:line-through">Bass!</span> Post</h1>
   <div class="divider"></div>
 {% for post in paginator.posts %}
 <div class="row-fluid">
   <div class="span12">
     <h2>{{ post.title }}</h2>
 
-    <h4>{{ post.date | date_to_long_string }}</h4>
+    <h4 class="greyed">{{ post.date | date_to_long_string }}</h4>
     {% if post.image %}
     <img src="{{ post.image }}" class="coverpic">
     {% endif %}
@@ -17,7 +17,7 @@ title: Drop the Posts
       {% if post.summary %}
       <i>{{ post.summary}}</i></p><p>
       {% else %}
-      OOOHHH nao tem sumário
+      <i>{{ post.content | split: "." | first}}...</i></p><p>
           <!-- Case for when no excerpt is defined -->
       {% endif %}
       <a href="{{ post.url }}">Read more</a>
@@ -28,39 +28,4 @@ title: Drop the Posts
 
 {% endfor %}
 
-<!-- For displaying the next and previous pages -->
-
-<div class="row-fluid">
-  <div class="span12">
-    <div class="pagination">
-      <ul>
-        {% if paginator.previous_page %}
-          {% if paginator.previous_page == 1 %}
-          <li><a href="/">Prev</a></li>
-          {% else %}
-          <li><a href="/page{{ paginator.previous_page }}">Prev</a></li>
-          {% endif %}
-        {% else %}
-        <li><span class="disabled">Prev</span></li>
-        {% endif %}
-        {% if paginator.page == 1 %}
-        <li><span class="active">1</span></li>
-        {% else %}
-        <li><a href="/">1</a></li>
-        {% endif %}
-        {% for count in (2..paginator.total_pages) %}
-          {% if count == paginator.page %}
-          <li><span class="active">{{ count }}</span></li>
-          {% else %}
-          <li><a href="/page{{ count }}">{{ count }}</a></li>
-          {% endif %}
-        {% endfor %}
-        {% if paginator.next_page %}
-        <li><a href="/page{{ paginator.next_page }}">Next</a></li>
-        {% else %}
-        <li><span class="disabled">Next</span></li>
-        {% endif %}
-      </ul>
-    </div>
-  </div>
-</div>
+{% include pagination.html %}

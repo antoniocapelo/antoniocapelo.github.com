@@ -1,12 +1,12 @@
 ---
 title: Lets start this
 layout: post
-summary: I just can't start a blog and not post immediatly. So here we go...
+summary: I just can't re-start a blog and not post immediatly. So here we go...
 image: "/img/photos/eu+jeitosa.jpg"
 categories: "jekyll"
 ---
 
-I just can't start a blog and not post immediatly. So here we go...
+I just can't re-start a blog and not post immediatly. So here we go...
 (Currently listening to <a href="http://open.spotify.com/track/4Ypxolb6A0oCPe9NqhFYdV">Mos Def - The Panties</a> so pardon me if I get too mellow :P )
 
 It was yesterday that I decided to stop blogging on the WP platform. My previous blog, which has a couple of years, survived one hosting transfer, two or three customized themes and gave me all the joys a blog should give. But I was feeling that the need of something new, where I could experiment more, without having to learn all the inner mechanics of Wordpress (I really don't have the time right now, too much stuff on my 'to learn' queue). I also have read about <a href="http://jekyllrb.com/" title="Jekyll site">Jekyll</a> and it made me curious by its simplicity + flexibility. Well, and the idea to post from the terminal is very cool. I admit.
@@ -142,7 +142,7 @@ Jekyll even creates a local server so you can work locally on your site and test
 
 When you're ready to deploy the changes, just push your local repo to GitHub and your new stuff will be online.
 
-Note: If you're not using GitHub to host your site, it's useful to know that the **_site** folder is what you need to upload to your FTP account, after jekyll finishes compiling the files.
+Note: If you're not using GitHub to host your site, it's useful to know that the **site** folder is what you need to upload to your FTP account, after jekyll finishes compiling the files.
 
 ##5. Make things pretty
 

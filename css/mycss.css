@@ -21,6 +21,12 @@ a {
 code {
 	color: #2E6231
 }
+
+.greyed {
+	color: #525252;
+	
+}
+
 .span9 a:hover, a:focus {
 	color: #efefef;
 	text-decoration: none;
@@ -165,7 +171,6 @@ code {
 .post img {
 	max-width: 450px;
 	height: auto;
-	max-height: 500px;
 	padding: 10px;
 	display: block;
 	clear: both;
@@ -174,7 +179,6 @@ code {
 .small {
 	max-width: 250px;
 	height: auto;
-	max-height: 250px;
 	padding: 10px;
 	display: block;
 	clear: both;
@@ -295,7 +299,6 @@ code {
 	.post img, .coverpic {
 		max-width: 80%;
 		height: auto;
-		max-height: 500px;
 		padding: 10px;
 		display: block;
 		clear: both;

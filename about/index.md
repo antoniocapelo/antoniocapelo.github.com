@@ -3,7 +3,7 @@ title: About Me
 layout: static
 ---
 
-# My name is António Capelo and I do stuff.
+# \# Capelo
 
 <img src="/img/photos/capelo.jpg" style="float:none">
 

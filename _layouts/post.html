@@ -6,7 +6,7 @@
 	</div>
 		<div class="span9 content post">
 		<h1>{{ page.title }}</h1>
-		<p class="muted"> {{ page.date | date_to_long_string }} <span style="margin-left:10px;margin-right:10px">|</span> 
+		<p class="muted">{{ page.date | date_to_long_string }}  <span style="margin-left:10px;margin-right:10px">|</span> 
 			{% if page.categories %} Categories:
 			{% for cat in page.categories %}
 
@@ -23,6 +23,7 @@
 		
 		<!-- Social Media -->
 		<br>
+		<div class="divider"></div>
 		<ul class="socialshare">
 			<!-- Twitter -->
 			<li><a href="https://twitter.com/share" class="twitter-share-button" data-via="antoniocapelo">Tweet</a></li>
