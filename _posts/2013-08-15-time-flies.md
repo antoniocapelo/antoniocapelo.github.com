@@ -14,11 +14,11 @@ tags:
 - capelo
 ---
 
-Times passes quickly indeed: Just about 3 years ago I was a young Civil Engineer and I was one of the lucky that indeed had a job with proper conditions. Still, I wasn't satisfied and didn't feel fit on what I was doing for a living. Now I'm on my senior year on Informatics Engineering and started working on a great company. Got a lot study to do, and a lot to catch up, but I'm really happy with all this! :)
+Times passes quickly indeed: Just about 3 years ago I was a young Civil Engineer and I was one of the few that indeed had a job with proper conditions. Still, I wasn't satisfied with what I was doing and didn't feel that I belonged at all. Now I'm on my senior year of Informatics Engineering and have just started working on a great company. Got a lot of studying to do, and a lot to catch up, but I'm really happy! :)
 
-The week before I started working I, was thinking about this and decided to make a clock based on HTML+CSS+JavaScript from scratch, just to kill some free time.
+The week before I started working, I was thinking about this and decided to make a clock based on HTML+CSS+JavaScript from scratch, just to kill some free time.
 
-I found out that it's pretty simple, mainly you need: 
+I found that it's pretty simple. Mainly you need: 
 
 * a `<div>` with the clock face as a background
 * a `<div>` for each clock hand, with the proper **div id**
@@ -27,7 +27,7 @@ I found out that it's pretty simple, mainly you need:
 
 For those who figured it out already, you can jump to the <a href="#pen">**pen**</a> on the bottom.
 
-Basically I use and **updateTime()** function, which asks for a moment.js instance, with a format that I specified. Then I call a **rotateHands()** function, and set a timeout of 1 second for it. The **rotateHands()** function receives the number of seconds, minutes and hours as arguments. They're passed as a string, but as I start to make some quick arithmetics with them, they're converted to Numbers. So, I simply calculate the number of degrees each of the hands has to be rotated in order to represent the actual time:
+Basically I created an **updateTime()** function, which asks for a moment.js instance, with a format that I specified. Then I call a **rotateHands()** function, and set a timeout of 1 second for it. The **rotateHands()** function receives the number of seconds, minutes and hours as arguments. They're passed as a string, but as I start to make some quick arithmetics with them, they're converted to Numbers. So, I simply calculate the number of degrees each of the hands has to be rotated in order to represent the actual time:
 
 	var degSec = 360/60*sec;
 	var degMin = 360/60*min;
