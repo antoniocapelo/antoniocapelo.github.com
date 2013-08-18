@@ -45,7 +45,7 @@ The tricky part is figure out how we're going to define the transformations, reg
 
 You can see the final result on the **pen** bellow, play with it, fork it, ,etc. This CodePen stuff is really fun :)
 <a name="pen"></a>
-<p data-height="434" data-theme-id="661" data-slug-hash="fpvDC" data-user="capelo" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/capelo/pen/fpvDC'>Analog Clock</a> by António Capelo (<a href='http://codepen.io/capelo'>@capelo</a>) on <a href='http://codepen.io'>CodePen</a></p>
+<p data-height="473" data-theme-id="661" data-slug-hash="fpvDC" data-user="capelo" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/capelo/pen/fpvDC'>Analog Clock</a> by António Capelo (<a href='http://codepen.io/capelo'>@capelo</a>) on <a href='http://codepen.io'>CodePen</a></p>
 <script async src="http://codepen.io/assets/embed/ei.js"></script>
 
 Now that I think about it, I guess that one nice feature would be adding a shadow to the clock hands. It's just a matter of re-calculating it's properties on each call. I'll work on that :)
