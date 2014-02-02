@@ -1,0 +1,8 @@
+name: "Capelo is blogging"
+description: "thoughts on coding / sampling / analog photography / rest of life"
+markdown: rdiscount
+pygments: true
+paginate: 4
+url: https://github.com/antoniocapelo/antoniocapelo.github.com/blob/master
+keywords: "coding capelo web developer"
+encoding: UTF-8
