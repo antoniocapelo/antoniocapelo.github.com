@@ -6,8 +6,8 @@ body,html{
 
 body {
 	font-family: 'Roboto',"Helvetica Neue",Helvetica,Arial,sans-serif;
-	font-size: 90%;
 	line-height: 26px;
+	font-size: 16px;
 }
 
 body, h1, h2, h3, h4, h5, p {
@@ -16,15 +16,24 @@ body, h1, h2, h3, h4, h5, p {
 
 a {
 	color:#2E6231;
+	text-decoration: underline;
 }
 
 code {
 	color: #2E6231
 }
 
+pre, code {
+	font-size: 14px;
+	margin: 0 0 20px;
+}
+
+p {
+	margin: 20px 0;
+}
+
 .greyed {
 	color: #525252;
-	
 }
 
 .span9 a:hover, a:focus {
@@ -74,30 +83,33 @@ code {
 	text-align: center;
 }
 
-.info h3 {
+.info .info-title {
 	padding: 0;
-	margin-bottom: 0;
+	margin-bottom: 10px;
+	font-size: 22px;
+	line-height: 22px;
 }
 
-.info ul {
+.info .info-menu {
 	list-style-type: none;
 	display: inline;
+	font-size: 20px;
 }
 
-.info ul li {
+.info .info-menu-item {
 	display: inline;
 	padding: 5px;
-}
-
-.info a:hover {
-	font-size: 120%;
-	color: #595959;
 	text-decoration: none;
 }
 
-.info a {
-	font-size: 120%;
+.info .info-menu-anchor {
 	color: #EFEFEF;
+	text-decoration: none;	
+}
+
+.info .info-menu-anchor:hover {
+	color: #595959;
+	text-decoration: none;
 }
 
 .info .activa a{
@@ -165,7 +177,8 @@ code {
 /* Post Layout */
 
 .post a, .static a{
-	font-weight: 400;
+	font-weight: bold;
+	text-decoration: underline;
 }
 
 .post img {
