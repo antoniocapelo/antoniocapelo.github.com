@@ -15,7 +15,7 @@ tags:
 
 Let's keep this blog runnin'!
 
-Lately I've been feedling with the AngularJS framework, which doesn't need any introductions (if you need some though, this [blog post](http://blog.chartbeat.com/2014/01/15/how-angular-lets-us-iterate/) is a good one).
+Lately I've been fiddling with the AngularJS framework, which doesn't need any introductions (if you need some though, this [blog post](http://blog.chartbeat.com/2014/01/15/how-angular-lets-us-iterate/) is a good one).
 
 On a project I'm working on I needed to create some **custom services** - to access RESTful API's, for example - and **directives** - to enhance some html functionality. 
 
