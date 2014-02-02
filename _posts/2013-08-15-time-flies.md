@@ -14,7 +14,7 @@ tags:
 - capelo
 ---
 
-Times passes quickly indeed: Just about 3 years ago I was a young Civil Engineer and I was one of the few that indeed had a job with proper conditions. Still, I wasn't satisfied with what I was doing and didn't feel that I belonged at all. Now I'm on my senior year of Informatics Engineering and have just started working on a great company. Got a lot of studying to do, and a lot to catch up, but I'm really happy! :)
+Times passes quickly indeed: Just about 3 years ago I was a young Civil Engineer and I was one of the "few" that indeed had a job with proper conditions. Still, I wasn't satisfied with what I was doing and didn't feel that I belonged at all. Now I'm on my senior year of Informatics Engineering and have just started working on a great company. Got a lot of studying to do, and a lot to catch up, but I'm really happy! :)
 
 The week before I started working, I was thinking about this and decided to make a clock based on HTML+CSS+JavaScript from scratch, just to kill some free time.
 

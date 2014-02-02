@@ -1,7 +1,7 @@
 ---
 title: A Different Angle
 layout: post
-summary: Debut post on the AngularJS framework -  Creation of my modal service
+summary: Debut post on the AngularJS framework -  Creation of a modal service
 image: "/img/angularjs-icon.png"
 categories: "coding"
 tags:
