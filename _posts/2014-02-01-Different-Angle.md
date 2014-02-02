@@ -17,7 +17,7 @@ Let's keep this blog runnin'!
 
 Lately I've been feedling with the AngularJS framework, which doesn't need any introductions (if you need some though, this [blog post](http://blog.chartbeat.com/2014/01/15/how-angular-lets-us-iterate/) is a good one).
 
-On my *pet project*  I needed to create some **custom services** - to access RESTful API's, for example - and **directives** - to enhance some html functionality. 
+On a project I'm working on I needed to create some **custom services** - to access RESTful API's, for example - and **directives** - to enhance some html functionality. 
 
 Besides those cases, I had to give the user some feedback after completing certain action. Of course, if this were a singular case, I could just assign some html elements to be shown depending on a success/failure variable, taking advantage of Angular's html-on-steroids, like:
 
