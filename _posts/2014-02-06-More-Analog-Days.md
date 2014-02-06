@@ -16,7 +16,7 @@ tags:
 Hi!
 A few months back, my photography habits started do decrease, being reduced to mainly taking photos with my iPhone and trying to pull some [tricks](http://instagram.com/acapelo) with the (awesome) VSCO Cam app. 
 
-I decided it's time to bring up the good routine of having a camera with me as much as I can and started it on the new year's eve - how cliché. Since then I burned a Agfapan 100 (pushed to 200) B&W roll, which I developed at home. I also developed an expired and messed up Agfa Vista 100 color roll I had laying around from the Summer. Both rolls were taken with my (Canonet QL 17)[http://mattsclassiccameras.com/canonet_QL17.html].
+I decided it's time to bring up the good routine of having a camera with me as much as I can and started it on the new year's eve - how cliché. Since then I burned a Agfapan 100 (pushed to 200) B&W roll, which I developed at home. I also developed an expired and messed up Agfa Vista 100 color roll I had laying around from the Summer. Both rolls were taken with my [Canonet QL 17](http://mattsclassiccameras.com/canonet_QL17.html).
 
 Let's start with the expired roll, bear with the grain+lack.of.colors+fadeness(??):
 
