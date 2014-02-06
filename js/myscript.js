@@ -16,6 +16,8 @@ $(document).ready(function() {
 		}
 	});
 
+	$('.post img').parent('a').addClass('image-anchor');
+
 	!function(d,s,id){
 		var js,fjs=d.getElementsByTagName(s)[0];
 		if(!d.getElementById(id)){
