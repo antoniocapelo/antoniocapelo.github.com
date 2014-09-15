@@ -1,31 +1,49 @@
 ---
 layout: default
-title: Capelo is Blogging
+title: Home
 ---
-<h1>Drop the <span style="text-decoration:line-through">Bass!</span> Post</h1>
-  <div class="divider"></div>
-{% for post in paginator.posts %}
-<div class="row-fluid">
-  <div class="span12">
-    <h2>{{ post.title }}</h2>
 
-    <h4 class="greyed">{{ post.date | date_to_long_string }}</h4>
-    {% if post.image %}
-    <img src="{{ post.image }}" class="coverpic">
-    {% endif %}
-    <p>
-      {% if post.summary %}
-      <i>{{ post.summary}}</i></p><p>
-      {% else %}
-      <i>{{ post.content | split: "." | first}}...</i></p><p>
-          <!-- Case for when no excerpt is defined -->
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+      
+      {% if post.image %}
+        <img src="{{ post.image }}" class="coverpic">
       {% endif %}
-      <a href="{{ post.url }}">Read more</a>
-    </p>
+      <p class="summary">
+        {% if post.summary %}
+          <i>{{ post.summary}}</i></p><p>
+        {% else %}
+          <i>{{ post.content | split: "." | first}}...</i></p><p>
+            <!-- Case for when no excerpt is defined -->
+        {% endif %}
+        <a class="read-more" href="{{ post.url }}">Read more</a>
+
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+
   </div>
+  {% endfor %}
 </div>
-  <div class="divider"></div>
 
-{% endfor %}
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>
 
-{% include pagination.html %}

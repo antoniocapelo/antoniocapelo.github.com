@@ -1,37 +1,42 @@
-{% include header.html %}
+---
+layout: default
+---
 
-<div class="row-fluid">
-	<div class="span3">
-		{% include sidebar.html %}
-	</div>
-		<div class="span9 content post">
-		<h1>{{ page.title }}</h1>
-		<p class="muted">{{ page.date | date_to_long_string }}  <span style="margin-left:10px;margin-right:10px">|</span> 
-			{% if page.categories %} 
-			Categories:
-			{% for cat in page.categories %}
-
-				 - <a href="/categories/{{cat}}">{{cat}}</a>
-
-			{% endfor %}
-		{% endif%}</p>
-		{% if page.image %}
-			<img src="{{ page.image }}">
-		{% endif %}
-
-		{{ content }}
-		
-		
-		<!-- Social Media -->
-		<br>
-		<div class="divider"></div>
-		<ul class="socialshare">
-			<!-- Twitter -->
-			<li><a href="https://twitter.com/share" class="twitter-share-button" data-via="antoniocapelo">Tweet</a></li>
-			<!-- Google + -->
-			<li><p><g:plusone size="medium"></g:plusone></p></li>
-		</ul>
-{% include comments.html%}
-		</div>
+<div class="post">    
+  <h1 class="post-title">{{ page.title }}</h1>
+  {% if page.image %}
+      <img src="{{ page.image }}">
+  {% endif %}
+  <span class="post-date">{{ page.date | date_to_string }}</span>
+  {{ content }}
 </div>
-{% include footer.html %}
+
+<div class="related">
+<div class="navigation-links">
+  {% if page.previous %}
+    <a class="navigate-anchor {% if page.next == null %} one{% endif %}" href="{{page.previous.url}}" style="background-image:url('{{page.previous.image}}')">
+      <span class="tip">Read Previous</span>
+      <span class="nav-title"><i>"{{page.previous.title}}"</i></span>
+    </a>
+  {% endif %}
+  {% if page.next %}
+  <a class="navigate-anchor {% if page.previous == null %} one{% endif %}" href="{{page.next.url}}" style="background-image:url('{{page.next.image}}')">
+    <span class="tip">Read Next</span>
+    <span class="nav-title"><i>"{{page.next.title}}"</i></span>
+  </a>
+  {% endif %}
+</div>
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    {% for post in site.related_posts limit:3 %}
+      <li>
+        <h3>
+          <a href="{{ post.url }}">
+            {{ post.title }}
+            <small>{{ post.date | date_to_string }}</small>
+          </a>
+        </h3>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

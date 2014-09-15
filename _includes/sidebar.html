@@ -1,25 +1,37 @@
-<div class="sidebar-nav-fixed affix">
-	<div class="cover">
-		<!-- <img src="/img/back.jpg"> -->
-	</div>
-	<div class="info">
-		<h2 class="info-title">{{site.name}}</h2>
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
 
-		<ul class="info-menu">
-	      <li class="info-menu-item" id="home"><a class="info-menu-anchor" href="/">Home</a></li>
-	      <li class="info-menu-item" id="about"><a class="info-menu-anchor" href="/about/">About</a></li>
-	    </ul>	
-		<br>
-		<table class="table-info" align="center">
-			<tr>
-				<td><a class="social-icon" id="twitter" title="Twitter" target="_blank" href="http://www.twitter.com/antoniocapelo" alt="Twitter"><span style="display:none">twitter</span></a> </td>
-				<td><a class="social-icon" id="github" title="GitHub" target="_blank" href="http://github.com/antoniocapelo" alt="GitHub"><span style="display:none">github</span></a></td>
-				<td><a class="social-icon" id="googleplus" title="Google+" target="_blank" href="https://plus.google.com/108881262271506526275/posts" alt="Google Plus"><span style="display:none">googleplus</span></a></td>
-				<td><a class="social-icon" id="instagram" title="Instagram" target="_blank" href="http://www.instagram.com/acapelo"><span style="display:none">instagram</span></a></td>
-			</tr>
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>{{ site.description }}</p>
+  </div>
 
-		</table>
-	<div id="footer">Personal Blog .  <a style="font-size:100%" href="http://www.antoniocapelo.com" title="antoniocapelo.com">António Capelo</a> . {{ site.time | date: '%Y' }}</div>
-	</div>
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="/">Home</a>
+
+    {% comment %}
+      The code below dynamically generates a sidebar nav of pages with
+      `layout: page` in the front-matter. See readme for usage.
+    {% endcomment %}
+
+    {% assign pages_list = site.pages %}
+    {% for node in pages_list %}
+      {% if node.title != null %}
+        {% if node.layout == "page" %}
+          <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+    <a class="sidebar-nav-item" href="{{ site.homepage }}">Personal Site</a>
+    <a class="sidebar-nav-item" href="{{ site.github }}">GitHub</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; {{ site.time | date: '%Y' }}. All rights reserved.
+    </p>
+  </div>
 </div>
-<div class="myclearfix"></div>
