@@ -62,7 +62,7 @@ On the [second half of the post](#secondhalf) there's some photos I took while o
 
 	<p>But I must say that a turning point was begining to work as a web developer at <b>blip</b>. They made me feel welcome and made me want to learn even more. I grew a lot while having fun! It's been over a year since I started there, I'm still learning and still loving what I do. I had to finish the last year of the degree while working, which wasn't easy, but was definitely worth it. </p>
 
-	<p><b>I guess what I mean is:</b> it's hard to leave some things 'on hold' and rewind some years on our life to go after you feel right. But it's even harder not to.</p>
+	<p><b>I guess what I mean is:</b> it's hard to leave some things 'on hold' and rewind some years of your life to go after what you feel right. But it's even harder not to.</p>
 
 </div>
 <script type="text/javascript">
