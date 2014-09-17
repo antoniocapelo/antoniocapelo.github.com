@@ -49,7 +49,7 @@ On the [second half of the post](#secondhalf) there's some photos I took while o
 <button class="expand-speech">Click Here to read it</button>
 
 <div class="speech collapsed">
-	<p>For those who don't know it, about 3 years ago I was a Civil Engineer, working on my second year as a Engineer at <a href="http://casais.pt/" target="_blank">Casais Engenharia</a>. I was part of the percentage who had a job but wasn't happy nor feeling remotely accomplished with it. Even working as a structure engineer, designing projects wasn't enough for me. I've always had a lot of curiosity about programming, mainly web development. Altough I didn't have any experience with it, I felt I could be good at it and, even more importantly, be happy doing it for a living.
+	<p>For those who don't know it, about 3 years ago I was a Civil Engineer, working on my second year as a Engineer at <a href="http://casais.pt/" target="_blank">Casais Engenharia</a>. I was part of the percentage who had a job but wasn't happy nor feeling remotely accomplished with it. Even working as a structure engineer, designing projects wasn't enough for me. I've always had a lot of curiosity about programming, mainly web development. Although I didn't have any experience with it, I felt I could be good at it and, even more importantly, be happy doing it for a living.
 	</p>
 
 	<p>So I took a 'leap of faith' and quit my job, studied for a National Exam and applied for the <a href="www.di.uminho.pt/ensino/licenciaturas/lei" target="_blank">Computer Science and Engineering</a> degree. </p>
