@@ -597,14 +597,17 @@ a.pagination-item:hover {
   width: 100%;
   left: 0;
   transition: all 0.35s ease-in; 
+  font-size: 80%;
 }
 
 .navigate-anchor:hover .tip {
   transform: translateX(-100%);
+  opacity: 0.0;
 }
 
 .navigate-anchor .nav-title {
   transform: translateX(100%);
+  opacity: 0.0;
 }
 
 .navigate-anchor:hover .nav-title {

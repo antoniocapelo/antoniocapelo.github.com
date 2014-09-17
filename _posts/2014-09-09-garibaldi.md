@@ -30,7 +30,7 @@ On the [second half of the post](#secondhalf) there's some photos I took while o
 	}
 
 	.speech {
-		max-height: 2000px;
+		max-height: 3000px;
 		transition: all 0.85s ease;
 		overflow: hidden;
 	}
