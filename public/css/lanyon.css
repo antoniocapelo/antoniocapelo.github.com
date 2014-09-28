@@ -612,6 +612,7 @@ a.pagination-item:hover {
 
 .navigate-anchor:hover .nav-title {
   transform: translateX(0);
+  opacity: 1.0;
 }
 
 .summary {
