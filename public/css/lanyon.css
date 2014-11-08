@@ -646,3 +646,18 @@ a {
 .social-icon:hover span,  .social-icon:active span {
   color: #313131;
 }
+/*
+#layout #footer {
+  display: 
+}#disqus_thread{
+     position: relative;
+}
+#disqus_thread:after{
+     content: "";
+     display: block;
+     height: 55px;
+     width: 100%;
+     position: absolute;
+     bottom: 0px;
+     background:white;
+}*/
