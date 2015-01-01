@@ -304,9 +304,12 @@ a.sidebar-nav-item:focus {
 
 .page,
 .post {
-  margin-bottom: 3em;
+  margin-bottom: 1em;
 }
 
+#twitter-widget-0 {
+  margin-bottom: 0.5em;
+}
 /* Blog post or page title */
 .page-title,
 .post-title,

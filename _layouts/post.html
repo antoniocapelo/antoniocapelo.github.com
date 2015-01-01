@@ -11,6 +11,9 @@ comments: true
   <span class="post-date">{{ page.date | date_to_string }}</span>
   {{ content }}
 </div>
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ site.author.twitter }}">Tweet</a>
+
 {% if page.comments %}
    <div id="disqus_thread"></div>
     <script type="text/javascript">
