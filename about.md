@@ -4,7 +4,7 @@ title: Who Am I
 ---
 
 
-<img src="/img/photos/capelo.jpg" style="float:none">
+<img style="max-width:400px" src="/img/photos/capelo.jpg" style="float:none">
 
 ##My name is António Capelo
 
