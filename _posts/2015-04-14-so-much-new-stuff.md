@@ -1,7 +1,7 @@
 ---
 title: So much new stuff
 layout: post
-summary: Summary of the first months of 2015 which were pretty full -  "anustart" for all the Arrested Development fans - tl;dr photos inside, check them!
+summary: Summary of the first months of 2015 which were pretty full -  "anustart" for all Arrested Development fans - tl;dr photos inside, check them!
 image: "/img/cover_anustart.jpg"
 categories: 
 - photography
