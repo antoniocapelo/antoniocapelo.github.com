@@ -27,7 +27,7 @@ There are a lot of nice and resources online and I particularly like [Todd Motto
 
 I totally agree with what's stated on that post so I keep my controllers with minimum business logic, only acting as a ViewModel - glueing data to the template - and some event delegation.
 
-I also try to follow the [Separation of Concerts principle](http://en.wikipedia.org/wiki/Separation_of_concerns), so I keep the services small and self-contained. This way, it's the controller's responsibility to fetch the data from each service the controller depends.
+I also try to follow the [Separation of Concerns principle](http://en.wikipedia.org/wiki/Separation_of_concerns), so I keep the services small and self-contained. This way, it's the controller's responsibility to fetch the data from each service the controller depends.
 
 ### Persisting
 
