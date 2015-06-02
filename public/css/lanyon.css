@@ -564,6 +564,9 @@ a.pagination-item:hover {
 
 /** Custom Stuff **/
 
+.underline {
+    text-decoration: underline;
+}
 .navigate-anchor {
   border: 1px solid #EEE;
   width: 50%;
