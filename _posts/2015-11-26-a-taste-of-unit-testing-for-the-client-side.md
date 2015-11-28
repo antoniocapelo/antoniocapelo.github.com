@@ -498,6 +498,7 @@ Remember what to test, as listed [here](#test-my-list).
 Keep in mind that we're doing some basic, first approach testing.
 
 To complete the job, the dev should consider covering some possible error cases, like:
+
 * passing invalid arguments into constructors
 * change the response from the ajax response to an unexpected one
 * etc
