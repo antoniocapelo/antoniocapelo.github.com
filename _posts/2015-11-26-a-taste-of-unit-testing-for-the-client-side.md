@@ -21,7 +21,7 @@ This post sums up the talk I did at [Mindera](http://mindera.com/), in one of ou
 ##Why?
 On one hand, it's important to have some concepts present when approaching a project to test, mainly if we come from a different context.
 
-Besides that - personally - when switching from AngularJS (which as a framework has many features that make unit testing easy) to a jQuery-based project, we came into some obstacles while begining to unit test it, so in this presentation I also tried to document it.
+Besides that - personally - when switching from AngularJS (which as a framework has many features that make unit testing easy) to a jQuery-based project, I came into some obstacles while begining to unit test it, so in this presentation I also tried to document it.
 
 ### So, Unit tests - they're cool, right?
 
