@@ -13,7 +13,9 @@ title: Home
     </h1>
       
       {% if post.image %}
+      <a href="{{ post.url }}">
         <img src="{{ post.image }}" class="coverpic">
+      </a>
       {% endif %}
       <p class="summary">
         {% if post.summary %}

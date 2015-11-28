@@ -667,3 +667,11 @@ a {
      bottom: 0px;
      background:white;
 }*/
+
+.tech-post img {
+    margin: 2em auto;
+}
+
+.centered {
+    text-align: center;
+}
