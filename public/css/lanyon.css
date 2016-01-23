@@ -41,7 +41,7 @@ body {
 }
 
 body {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 
@@ -108,6 +108,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0;
   color: #505050;
+  text-align: center;
 }
 .masthead-title a {
   color: #505050;
@@ -155,10 +156,10 @@ h1, h2, h3, h4, h5, h6 {
   overflow-y: auto;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-size: .875rem; /* 15px */
-  color: rgba(255,255,255,.6);
-  background-color: #202020;
+  color: -3444;
   -webkit-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out;
+  border-left: 1px solid #eee;
 }
 @media (min-width: 30em) {
   .sidebar {
@@ -169,7 +170,6 @@ h1, h2, h3, h4, h5, h6 {
 /* Sidebar content */
 .sidebar a {
   font-weight: normal;
-  color: #fff;
 }
 .sidebar-item {
   padding: 1rem;
@@ -180,19 +180,23 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Sidebar nav */
 .sidebar-nav {
-  border-bottom: 1px solid rgba(255,255,255,.1);
+  border-bottom: 1px solid #eee;
+  border-left: 1px solid #eee;
+  position: relative;
+  left: -1px;
 }
 .sidebar-nav-item {
   display: block;
   padding: .5rem 1rem;
-  border-top: 1px solid rgba(255,255,255,.1);
+  border-top: 1px solid #eee;
+  position: relative;
+  left: -1px;
 }
 .sidebar-nav-item.active,
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: none;
-  background-color: rgba(255,255,255,.1);
-  border-color: transparent;
+  background-color: white;
 }
 
 @media (min-width: 48em) {
@@ -314,7 +318,7 @@ a.sidebar-nav-item:focus {
 .page-title,
 .post-title,
 .post-title a {
-  color: #303030;
+  color: #333;
 }
 .page-title,
 .post-title {
@@ -347,7 +351,7 @@ a.sidebar-nav-item:focus {
   color: #999;
 }
 .related-posts li a:hover {
-  color: #A34747;
+  color: #C80909;
   text-decoration: none;
 }
 .related-posts li a:hover small {
@@ -417,6 +421,7 @@ a.pagination-item:hover {
 .layout-reverse .sidebar {
   left: auto;
   right: -14rem;
+  overflow: visible;
 }
 .layout-reverse .sidebar-toggle {
   left: auto;
@@ -627,10 +632,11 @@ a.pagination-item:hover {
 
 .read-more {
   font-family: 'PT Sans';
+  text-transform: lowercase;
 }
 
 a {
-  color: #A34747;
+  color: #C80909;
 }
 
 .social-list {
@@ -674,4 +680,34 @@ a {
 
 .centered {
     text-align: center;
+}
+
+/* override hljs background */
+
+pre code.hljs {
+    background-color: #f9f9f9 !important;
+    background: #f9f9f9 !important;
+}
+
+/* Limiting body width */
+
+body {
+    margin: 40px auto;
+    max-width: 750px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #444;
+    padding: 0 10px;
+    overflow-x: visible;
+}
+
+/* letting it breathe */
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+}
+
+.post-image-link {
+    display: block;
+    margin-top: 5px;
 }
