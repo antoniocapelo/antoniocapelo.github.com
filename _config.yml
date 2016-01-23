@@ -23,6 +23,7 @@ version:          1.0.0
 
 github:           https://github.com/antoniocapelo/
 
-homepage:		  http://www.antoniocapelo.com
+homepage:		  http://www.capelo.me
+homepageName:		  capelo.me
 
-rssfeed:		  http://feeds.feedburner.com/Capelo-is-Blogging
+rssfeed:		  http://feeds.feedburner.com/CapeloIsBlogging
