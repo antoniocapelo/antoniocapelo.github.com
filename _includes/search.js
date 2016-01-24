@@ -13,16 +13,43 @@ $(function() {
     };
 
     // Main Variables
-    var results = document.querySelector(SELECTORS.results);
-    var searchParams = [
-        {
-            type: 'category',
-            values: getParam('category')
-        }, {
-            type: 'tag',
-            values: getParam('tag')
-        }
-    ];
+    var results;
+    var searchParams;
+
+    (function init() {
+        results = document.querySelector(SELECTORS.results);
+        searchParams = [
+            {
+                type: 'category',
+                values: getParam('category')
+            }, {
+                type: 'tag',
+                values: getParam('tag')
+            }
+        ];
+        setupHeader();
+
+        getIndex()
+        .then(function(data) {
+            filterPostsByPropertyValue(data, searchParams)
+            .map(function(post) {
+                return createLiEl(post);
+            }).
+                map(function(li) {
+                results.appendChild(li);
+                return li;
+            })
+            .filter(function() {
+
+            })
+            //if (posts.length === 0) {
+            //// Display 'no results found' or similar here
+            //noResultsPage();
+            //} else {
+            //layoutResultsPage(type, value, posts);
+            //}
+        });
+    })();
 
     function setupHeader() {
         searchParams.filter(function(sp) {
@@ -52,26 +79,11 @@ $(function() {
         .unwrap();
     }
 
+    // getIndex :: () -> [Object]
+    function getIndex() {
+        return $.getJSON(SEARCH_ENDPOINT) ;
+    }
 
-    $.getJSON(SEARCH_ENDPOINT, function(data) {
-        filterPostsByPropertyValue(data, searchParams)
-        .map(function(post) {
-            return createLiEl(post);
-        }).
-        map(function(li) {
-            results.appendChild(li);
-            return li;
-        })
-        .filter(function() {
-          
-        })
-        //if (posts.length === 0) {
-        //// Display 'no results found' or similar here
-        //noResultsPage();
-        //} else {
-        //layoutResultsPage(type, value, posts);
-        //}
-    });
 
     // createLiEl :: Object -> DOMEl
     function createLiEl(post) {
@@ -119,5 +131,4 @@ $(function() {
             return post !== null && post.category === cat;
         }).length > 0
     }
-
 });
