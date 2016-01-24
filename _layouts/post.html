@@ -3,12 +3,22 @@ layout: default
 comments: true
 ---
 
-<div class="post">    
+<div class="post{% if page.techPost %} tech-post{% endif %}">    
   <h1 class="post-title">{{ page.title }}</h1>
   {% if page.image %}
-      <img src="{{ page.image }}">
+      <img style="margin:0 0 1rem;" src="{{ page.image }}">
   {% endif %}
   <span class="post-date">{{ page.date | date_to_string }}</span>
+
+  <p class="tags">
+  Tags:
+  {% for tag in page.tags %}
+    <a href="{{site.baseUrl}}/search?tag={{tag | downcase | escape}}">{{tag}}</a>
+     {% if forloop.last == false %},
+     {% endif %}
+  {% endfor%}
+  </p>
+
   {{ content }}
 </div>
 

@@ -26,8 +26,14 @@
 
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
     {% include google_analytics.html %}
+    <script type="text/javascript" charset="utf-8" src="https://code.jquery.com/jquery-2.2.0.min.js"> </script>
+
     {% include highlight.html %}
     {% include all-js.html %}
+
+    <script type="text/javascript" charset="utf-8">
+        {% include search.js %}
+    </script>
 
   </body>
 </html>

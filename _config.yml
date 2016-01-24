@@ -9,9 +9,11 @@ permalink:        pretty
 title:            Capelo is blogging
 tagline:          ''
 description:      'thoughts on coding / sampling / analog photography / rest of life'
-url:              http://blog.antoniocapelo.com
+url:              http://blog.capelo.me
 baseurl:          '/'
 paginate:         5
+paginate_path: "/page:num/"
+
 
 author:
   name:           'António Capelo'

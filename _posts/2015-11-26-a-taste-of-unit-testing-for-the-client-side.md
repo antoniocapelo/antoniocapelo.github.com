@@ -1,10 +1,9 @@
 ---
 title: A Taste of Unit Testing for the Client-side
-layout: tech-post
+layout: post
 summary: This post sums up the talk I did at Mindera, in one of our TechTalks. It comes as an introduction both to the concept of unit testing and to writing testable code.
 image: "/img/a-taste-of-unit-testing/testing-cover.jpg"
-categories: 
-- coding
+category: coding
 tags:
 - x100
 - Berlin
@@ -12,6 +11,7 @@ tags:
 - Paris
 - dotscale
 - capelo.me
+techPost: true
 ---
 
 This post sums up the talk I did at [Mindera](http://mindera.com/), in one of our TechTalks. It comes as an introduction both to the concept of unit testing and to writing testable code.
