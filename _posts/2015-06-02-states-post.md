@@ -3,7 +3,7 @@ title: States. Angular and United
 layout: post
 summary: Dealing with states in AngularJS and some snapshots of the trip to the US
 image: "/img/travelin-man.jpg"
-categories: 
+category: 
 - coding
 tags:
 - javascript

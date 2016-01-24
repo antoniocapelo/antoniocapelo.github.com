@@ -3,7 +3,7 @@ title: Garibaldi
 layout: post
 summary: Got the degree, went to Sicily, got the girl and came back. dope.
 image: "/img/hostel.png"
-categories: 
+category: 
 - photography
 - digital
 tags:

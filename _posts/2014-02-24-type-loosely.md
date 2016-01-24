@@ -3,7 +3,7 @@ title: Type loosely
 layout: post
 summary: New stuff, film roll developed + AngularJS directive 
 image: "/img/typewrite.png"
-categories: 
+category: 
 - coding
 - analog
 tags:

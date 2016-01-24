@@ -3,7 +3,7 @@ title: On Using Vim
 layout: post
 summary: My thoughts on starting to use vim as my primary Code Editor
 image: "/img/vim.gif"
-categories: 
+category: 
 - coding
 tags:
 - vim

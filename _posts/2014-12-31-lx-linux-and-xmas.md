@@ -3,7 +3,7 @@ title: Lx, linuX and X-mas time
 layout: post
 summary: How I improved my site availability. Also, I'll share a cool JS functional library and some thoughts on my current linux distro. And some photos taken between a quick trip to Lisbon and Christmas. 
 image: "/img/lisbon.jpg"
-categories: 
+category: 
 - photography
 - coding
 tags:

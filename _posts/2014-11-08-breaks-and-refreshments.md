@@ -3,7 +3,7 @@ title: Breaks & Refreshments
 layout: post
 summary: Photo updates and self-promotion of the Droppin' Bars CSS grid
 image: "/img/london.png"
-categories: 
+category: 
 - photography
 - digital
 tags:

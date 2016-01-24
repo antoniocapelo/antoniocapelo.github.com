@@ -1,16 +1,19 @@
 $(function() {
+    var SEARCH_ENDPOINT = '/search.json';
     var SELECTORS = {
         results     : '.results',
         resultsTitle: '#results-content .title',
         values      : '.values',
         type        : '.type'
     };
-    var results = document.querySelector(SELECTORS.results);
 
+    // Extending Array prototype
     Array.prototype.unwrap = function(j) {
         return this.reduce(function(prev,curr) {return prev.concat(curr);},[]);
     };
 
+    // Main Variables
+    var results = document.querySelector(SELECTORS.results);
     var searchParams = [
         {
             type: 'category',
@@ -21,16 +24,18 @@ $(function() {
         }
     ];
 
-    searchParams.filter(function(sp) {
-        return sp.values.length > 0;
-    })
-    .map(buildHeader)
-    .map(function(el) {
-        document.querySelector(SELECTORS.values).appendChild(el);
-    });
+    function setupHeader() {
+        searchParams.filter(function(sp) {
+            return sp.values.length > 0;
+        })
+        .map(buildTitle)
+        .map(function(el) {
+            document.querySelector(SELECTORS.values).appendChild(el);
+        });
+    }
 
-    // buildHeader :: (DOMEl, Object) -> DOMEl
-    function buildHeader(searchParam) {
+    // buildTitle:: Object -> DOMEl
+    function buildTitle(searchParam) {
         var valuesTxt = searchParam.values.join(', ');
         return document.createTextNode(valuesTxt + ' as ' + searchParam.type + (searchParam.values.length > 1 ? 's' : ''));
     }
@@ -48,14 +53,18 @@ $(function() {
     }
 
 
-    $.getJSON('/search.json', function(data) {
+    $.getJSON(SEARCH_ENDPOINT, function(data) {
         filterPostsByPropertyValue(data, searchParams)
         .map(function(post) {
             return createLiEl(post);
         }).
         map(function(li) {
             results.appendChild(li);
-        });
+            return li;
+        })
+        .filter(function() {
+          
+        })
         //if (posts.length === 0) {
         //// Display 'no results found' or similar here
         //noResultsPage();
@@ -93,7 +102,7 @@ $(function() {
         .map(function(sp) { return sp.values; })
         .unwrap()
         .filter(function(tag) {
-            return post !== null && post.tags && post.tags.indexOf(tag) > -1;
+            return post !== null && post.tags && post.tags.indexOf(tag.toLowerCase()) > -1;
         }).length > 0
     }
 

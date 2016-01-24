@@ -3,7 +3,7 @@ title: Lets start this
 layout: post
 summary: I just can't re-start a blog and not post immediatly. So here we go...
 image: "/img/photos/eu+jeitosa.jpg"
-categories: "jekyll"
+category: "jekyll"
 ---
 
 I just can't re-start a blog and not post immediatly. So here we go...
@@ -125,7 +125,7 @@ Example:
 	title: Post Title
 	layout: layout_post
 	image: "/img/twerkin.jpg"
-	categories: "foo"
+	category: "foo"
 	---
 
 	Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.

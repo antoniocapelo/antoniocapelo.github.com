@@ -3,7 +3,7 @@ title: Work the Flow
 layout: post
 summary: I'm using Express, AngularJS, Grunt and tiny node scripts to develop and maintain my website. Check out how.
 image: "/img/site.png"
-categories: 
+category: 
 - coding
 - webdevelopment
 tags:

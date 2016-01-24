@@ -3,7 +3,7 @@ title: More Analog Days
 layout: post
 summary: After a break, I've restarted developing 35mm film, here's the result.
 image: "/img/photos/capelo_cam.jpg"
-categories: "analog"
+category: "analog"
 tags:
 - analog
 - 35mm

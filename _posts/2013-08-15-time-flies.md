@@ -3,7 +3,7 @@ title: Time Flies
 layout: post
 summary: Thoughts about how quickly times passes. Oh yeah, and a quickie on making an analog clock with HTML+CSS+Javascript :)
 image: "/img/time_flies.png"
-categories: "coding"
+category: "coding"
 tags:
 - coding
 - html

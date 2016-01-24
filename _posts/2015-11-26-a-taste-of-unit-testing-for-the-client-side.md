@@ -5,12 +5,12 @@ summary: This post sums up the talk I did at Mindera, in one of our TechTalks. I
 image: "/img/a-taste-of-unit-testing/testing-cover.jpg"
 category: coding
 tags:
-- x100
-- Berlin
 - Mindera
-- Paris
-- dotscale
 - capelo.me
+- unit-testing
+- jquery
+- karma
+- jasmine 
 techPost: true
 ---
 

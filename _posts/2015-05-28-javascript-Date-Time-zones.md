@@ -3,7 +3,7 @@ title: Javascript Date objects and their default time zone
 layout: post
 summary: Quick post about instantiating Date objects on Javascript
 image: "/img/times.jpg"
-categories: 
+category: 
 - coding
 tags:
 - javascript
