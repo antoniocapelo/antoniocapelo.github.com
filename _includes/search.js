@@ -42,12 +42,6 @@ $(function() {
             .filter(function() {
 
             })
-            //if (posts.length === 0) {
-            //// Display 'no results found' or similar here
-            //noResultsPage();
-            //} else {
-            //layoutResultsPage(type, value, posts);
-            //}
         });
     })();
 
@@ -128,7 +122,7 @@ $(function() {
         })
         .unwrap()
         .filter(function(cat) {
-            return post !== null && post.category === cat;
+            return post !== null && post.category.indexOf(cat.toLowerCase()) > -1;
         }).length > 0
     }
 });

@@ -1,6 +1,6 @@
 {
     "title"    : "{{ post.title }}",
-    "category" : "{{ post.category }}",
+    "category" : [{% for cat in post.category %}"{{ cat | downcase}}"{% if forloop.last == false %},{% endif %}{% endfor %}],
     "tags"     : [{% for tag in post.tags %}"{{ tag | downcase}}"{% if forloop.last == false %},{% endif %}{% endfor %}],
     "href"     : "{{ post.url }}",
     "date"     : {
