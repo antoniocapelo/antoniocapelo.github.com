@@ -743,3 +743,7 @@ h1, h2, h3, h4, h5, h6 {
 .results li {
     margin-top: 15px;
 }
+
+.coverpic {
+    width: 100%;
+}

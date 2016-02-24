@@ -6,7 +6,7 @@ comments: true
 <div class="post{% if page.techPost %} tech-post{% endif %}">    
   <h1 class="post-title">{{ page.title }}</h1>
   {% if page.image %}
-      <img style="margin:0 0 1rem;" src="{{ page.image }}">
+      <img style="margin:0 0 1rem;width: 100%;" src="{{ page.image }}">
   {% endif %}
   <span class="post-date">{{ page.date | date_to_string }}</span>
 
