@@ -9,8 +9,8 @@ tags:
 - eye
 - analog
 - blackandwhite
-- b&w
 - snowtrip
+- snowboard
 - snow
 - mindera 
 ---
