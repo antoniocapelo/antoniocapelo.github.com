@@ -57,7 +57,9 @@ $(function() {
 
     // buildTitle:: Object -> DOMEl
     function buildTitle(searchParam) {
-        var valuesTxt = searchParam.values.join(', ');
+        var valuesTxt = searchParam.values.map(function(el) {
+            return decodeURIComponent(el);
+        }).join(', ');
         return document.createTextNode(valuesTxt + ' as ' + searchParam.type + (searchParam.values.length > 1 ? 's' : ''));
     }
 
@@ -108,7 +110,7 @@ $(function() {
         .map(function(sp) { return sp.values; })
         .unwrap()
         .filter(function(tag) {
-            return post !== null && post.tags && post.tags.indexOf(tag.toLowerCase()) > -1;
+            return post !== null && post.tags && post.tags.indexOf(decodeURIComponent(tag).toLowerCase()) > -1;
         }).length > 0
     }
 
