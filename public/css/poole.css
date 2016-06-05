@@ -234,11 +234,30 @@ blockquote p:last-child {
   }
 }
 
-img {
+.posts img {
+    margin-top: 2rem;
+}
+
+.post img {
   display: block;
-  max-width: 100%;
-  margin: 0 0 1rem;
-  border-radius: 5px;
+  margin-bottom: 2rem;
+  position: relative;
+  width: 60vw;
+  left: calc(-30vw + 50%);
+}
+
+@media (max-width: 56em) {
+    .post img {
+        width: 100vw;
+        left: calc(-50vw + 50%);
+    }
+}
+
+@media screen and (max-width: 100em) and (min-width: 56em) {
+    .post img {
+        width: 80vw;
+        left: calc(-40vw + 50%);
+    }
 }
 
 /* Tables */
