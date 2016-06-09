@@ -234,16 +234,31 @@ blockquote p:last-child {
   }
 }
 
+
+/** Image resizing **/
+
 .posts img {
     margin-top: 2rem;
 }
 
 .post img {
-  display: block;
-  margin-bottom: 2rem;
+  display: inline-block;
+  margin-bottom: 0;
   position: relative;
   width: 60vw;
   left: calc(-30vw + 50%);
+}
+
+.post img~img {
+  margin-bottom: 5px;
+}
+
+.post img.vertical {
+    width: 40vw;
+    display: inline-block;
+    margin-right: auto;
+    margin-left: auto;
+    left: calc(-20vw + 50%);
 }
 
 @media (max-width: 56em) {
@@ -259,6 +274,103 @@ blockquote p:last-child {
         left: calc(-40vw + 50%);
     }
 }
+
+
+.cover-container {
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
+    height: 80vh;
+    background-size: cover;
+    min-height: 400px;
+    margin-bottom: 50px;
+}
+
+.cover-back {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+    min-height: 400px;
+    /*-webkit-filter: blur(3px);*/
+    /*filter: blur(3px);*/
+    -webkit-filter: blur(1px) grayscale(1) brightness(1.5);
+    filter: blur(1px) grayscale(1) brightness(1.5);
+    transform: scale(1.03);
+}
+
+.post-page .post-title {
+    margin-top: 0;
+    background: white;
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    font-size: 80px;
+    padding: 10px;
+    transform: translateX(-50%);
+}
+
+.post-metadata {
+    font-size: 0.9em;
+    position: absolute;
+    bottom: 20px;
+    left: 36%;
+    background: white;
+    padding: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.post-metadata a:hover {
+    opacity: 1;
+}
+
+
+/** Cover image resizing*/
+@media (max-width: 56em) {
+    .cover-back {
+        min-height: auto;
+    }
+
+    .cover-container {
+        width: 100vw;
+        position: relative;
+        left: calc(-50vw + 50%);
+        height: auto;
+        min-height: auto;
+        background-size: cover;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .post-page .post-title {
+        font-size: 46px;
+        width: 80%;
+        text-align: center;
+        left: 0;
+        transform: initial;
+        top: 0;
+        margin-top: 20px;
+        display: inline-block;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .post-metadata {
+        width: 80%;
+        display: inline-block;
+        position: relative;
+        left:0;
+        top: 0;
+        z-index: 10;
+        margin-top: 60px;
+        transform: initial;
+    }
+}
+
+
+
 
 /* Tables */
 table {
@@ -455,4 +567,7 @@ a.pagination-item:hover {
     border-bottom-right-radius: 4px;
   }
 }
+
+p > p:only-child {
+position: relative; top: -10px;
 

@@ -101,15 +101,16 @@ h1, h2, h3, h4, h5, h6 {
 .masthead {
   padding-top:    1rem;
   padding-bottom: 1rem;
-  margin-bottom: 3rem;
-  border-bottom: 1px solid #eee;
+  margin-bottom: 1rem;
 }
+
 .masthead-title {
   margin-top: 0;
   margin-bottom: 0;
   color: #505050;
-  text-align: center;
+  text-align: left;
 }
+
 .masthead-title a {
   color: #505050;
 }
@@ -320,16 +321,16 @@ a.sidebar-nav-item:focus {
 .post-title a {
   color: #333;
 }
-.page-title,
-.post-title {
-  margin-top: 0;
+.page-title {
+    margin-top: 0;
 }
+
 
 /* Meta data line below post title */
 .post-date {
   display: block;
-  margin-top: -8px;
-  margin-bottom: 1rem;
+  margin-top: 10px;
+  margin-bottom: 0rem;
   color: #9a9a9a;
 }
 
@@ -427,6 +428,7 @@ a.pagination-item:hover {
   left: auto;
   right: -14rem;
   overflow: visible;
+  background: white;
 }
 .layout-reverse .sidebar-toggle {
   left: auto;
@@ -577,6 +579,7 @@ a.pagination-item:hover {
 .underline {
     text-decoration: underline;
 }
+
 .navigate-anchor {
   border: 1px solid #EEE;
   width: 50%;
@@ -588,8 +591,7 @@ a.pagination-item:hover {
   margin-bottom: 1.5rem;
   background-repeat: no-repeat;
   background-position: center center;
-  text-shadow: 0px 2px 2px #000;
-  color: #FFF;
+  color: #444;
   overflow: hidden;
   position: relative;
 }
@@ -699,7 +701,7 @@ pre code.hljs {
 /* Limiting body width */
 
 body {
-    margin: 40px auto;
+    margin: 0 auto;
     max-width: 750px;
     line-height: 1.6;
     font-size: 18px;
@@ -729,15 +731,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .about.page {
     text-align: center;
-}
-
-.post-metadata {
-    font-size: 0.9em;
-    opacity: 0.7;
-}
-
-.post-metadata a:hover {
-    opacity: 1;
 }
 
 .results li {
