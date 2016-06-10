@@ -242,8 +242,9 @@ blockquote p:last-child {
 }
 
 .post img {
-  display: inline-block;
-  margin-bottom: 0;
+  display: block;
+  margin-bottom: 5px;
+  margin.top: 5px;
   position: relative;
   width: 60vw;
   left: calc(-30vw + 50%);
@@ -255,14 +256,14 @@ blockquote p:last-child {
 
 .post img.vertical {
     width: 40vw;
-    display: inline-block;
     margin-right: auto;
     margin-left: auto;
     left: calc(-20vw + 50%);
 }
 
+
 @media (max-width: 56em) {
-    .post img {
+    .post img, .post img.vertical {
         width: 100vw;
         left: calc(-50vw + 50%);
     }
@@ -272,6 +273,10 @@ blockquote p:last-child {
     .post img {
         width: 80vw;
         left: calc(-40vw + 50%);
+    }
+    .post img.vertical {
+        width: 60vw;
+        left: calc(-30vw + 50%);
     }
 }
 
