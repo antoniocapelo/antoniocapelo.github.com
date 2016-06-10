@@ -94,6 +94,7 @@ h1 {
 }
 h2 {
   margin-top: 1rem;
+  margin-bottom: 1rem;
   font-size: 2rem;
 }
 h3 {
@@ -454,10 +455,10 @@ tbody tr:nth-child(odd) th {
 .masthead-title {
   margin-top: 0;
   margin-bottom: 0;
-  color: #505050;
+  color: #444;
 }
 .masthead-title a {
-  color: #505050;
+  color: #444;
 }
 .masthead-title small {
   font-size: 75%;

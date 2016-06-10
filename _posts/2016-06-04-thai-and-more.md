@@ -41,6 +41,7 @@ This time: Koh Samui Island.
 
 ## Back to Portugal
 
+
 <a href="https://www.flickr.com/photos/acapelo/27422521466/in/photostream" target="_blank" title="dishes"><img src="https://farm8.staticflickr.com/7037/27422521466_cab3b3d9e9_c.jpg" alt="dishes"></a>
 <a href="https://www.flickr.com/photos/acapelo/27385374471/in/photostream" target="_blank" title="S"><img src="https://farm8.staticflickr.com/7093/27385374471_88b8541b08_c.jpg" alt="S" class="vertical"></a>
 S.
