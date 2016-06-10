@@ -34,6 +34,8 @@
  * Update the foundational and global aspects of the page.
  */
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,800);
+
 /* Prevent scroll on narrow devices */
 html,
 body {
@@ -46,7 +48,7 @@ body {
 
 
 html {
-  font-family: 'PT Serif', p, "Times New Roman", serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -642,10 +644,6 @@ a.pagination-item:hover {
 .read-more {
   font-family: 'PT Sans';
   font-size: 0.9em;
-}
-
-a {
-  color: #C80909;
 }
 
 .social-list {

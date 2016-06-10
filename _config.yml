@@ -11,7 +11,7 @@ tagline:          ''
 description:      'thoughts on coding / sampling / analog photography / rest of life'
 url:              http://blog.capelo.me
 baseurl:          '/'
-paginate:         5
+paginate:         7
 paginate_path: "/page:num/"
 
 
