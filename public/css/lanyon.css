@@ -734,3 +734,7 @@ h1, h2, h3, h4, h5, h6 {
 .coverpic {
     width: 100%;
 }
+
+.read-more {
+    text-decoration: underline;
+}
