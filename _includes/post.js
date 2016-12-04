@@ -23,10 +23,9 @@
     }
 
     ready(function() {
-        var ok = document.querySelectorAll('.post-page img')
-        ok.forEach(function(img) {
+        var imageElements = document.querySelectorAll('.post-page img')
+        imageElements.forEach(function(img) {
             img.addEventListener("load", imgLoaded);
-
 
             if (img.height && img.width) {
                 imgLoaded(img);
