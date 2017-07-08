@@ -274,12 +274,12 @@ blockquote p:last-child {
 
 @media screen and (max-width: 100em) and (min-width: 56em) {
     .post img {
-        width: 80vw;
-        left: calc(-40vw + 50%);
-    }
-    .post img.vertical {
         width: 60vw;
         left: calc(-30vw + 50%);
+    }
+    .post img.vertical {
+        width: 50vw;
+        left: calc(-25vw + 50%);
     }
 }
 
@@ -291,6 +291,7 @@ blockquote p:last-child {
     height: 80vh;
     background-size: cover;
     min-height: 400px;
+    overflow: hidden;
     margin-bottom: 50px;
 }
 

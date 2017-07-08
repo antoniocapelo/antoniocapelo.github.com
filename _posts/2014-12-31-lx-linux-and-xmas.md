@@ -56,7 +56,8 @@ Ramda is a functional library for javascript programmers, used on the [Frontend 
 	avg([1,2,3,4,5]); // 3 :) 
 
 <div id="linux"></div>
-##Linux Distro - Elementary OS
+
+## Linux Distro - Elementary OS
 
 Last week I found myself without a personal computer to play/work with (sad, I know). As it's a temporary situation I decided to use an 'old' computer we had laying around by the house. Being a mac user for about 8-9 years it's always frustrating to work with windows environments so I decided to try a new Linux distro and I chose the [Elementary OS](http://elementaryos.org/). 
 
@@ -76,42 +77,20 @@ Bellow there's a list of the main things I needed after a fresh OS install:
 * Elementary Tweaks - for customizing shortcuts and global behaviour/appearance
 
 <div id="photos"></div>
-##Photo Stuff
 
-Went to Lisbon
+## Photo Stuff
 
-<a target="_blank" href="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4495.JPG?size=1024"><img src="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4495.JPG?size=1024"></a>
-<a target="_blank" href="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4498.JPG?size=1024"><img src="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4498.JPG?size=1024"></a>
-<a target="_blank" href="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4531.JPG?size=1024"><img src="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4531.JPG?size=1024"></a>
-<a target="_blank" href="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4533.JPG?size=1024"><img src="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4533.JPG?size=1024"></a>
-
-met friends
-
-<a target="_blank" href="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4553.JPG?size=1024"><img src="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4553.JPG?size=1024"></a>
-<a target="_blank" href="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4557.JPG?size=1024"><img src="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4557.JPG?size=1024"></a>
-<a target="_blank" href="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4565.JPG?size=1024"><img src="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4565.JPG?size=1024"></a>
-<a target="_blank" href="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4574.JPG?size=1024"><img src="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4574.JPG?size=1024"></a>
-
-hills
-
-<a target="_blank" href="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4577.JPG?size=1024"><img src="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4577.JPG?size=1024"></a>
-
-Heading to Sintra
-
-<a target="_blank" href="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4599.JPG?size=1024"><img src="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4599.JPG?size=1024"></a>
-<a target="_blank" href="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4631.JPG?size=1024"><img src="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4631.JPG?size=1024"></a>
-<a target="_blank" href="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4662.JPG?size=1024"><img src="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4662.JPG?size=1024"></a>
-<a target="_blank" href="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4788.JPG?size=1024"><img src="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4788.JPG?size=1024"></a>
-<a target="_blank" href="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4795.JPG?size=1024"><img src="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4795.JPG?size=1024"></a>
-<a target="_blank" href="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4801.JPG?size=1024"><img src="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4801.JPG?size=1024"></a>
-<a target="_blank" href="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4839.JPG?size=1024"><img src="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4839.JPG?size=1024"></a>
-<a target="_blank" href="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4840.JPG?size=1024"><img src="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4840.JPG?size=1024"></a>
-
-Back to Porto
-
-<a target="_blank" href="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4876.JPG?size=1024"><img src="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4876.JPG?size=1024"></a>
-<a target="_blank" href="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4879.JPG?size=1024"><img src="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4879.JPG?size=1024"></a>
-<a target="_blank" href="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4881.JPG?size=1024"><img src="https://copy.com/thumbs_public/zN2weeaMVJZ3qMOX/DSCF4881.JPG?size=1024"></a>
+<a href="https://www.flickr.com/photos/acapelo/35280837520/in/photostream" target="_blank" title="DSCF4577_2"><img src="https://farm5.staticflickr.com/4131/35280837520_5586c573b7_b.jpg" alt="DSCF4577_2"></a>
+<a href="https://www.flickr.com/photos/acapelo/35668089195/in/photostream" target="_blank" title="DSCF4744"><img src="https://farm5.staticflickr.com/4074/35668089195_ca20c53a5b_b.jpg" alt="DSCF4744"></a>
+<a href="https://www.flickr.com/photos/acapelo/35537582751/in/photostream" target="_blank" title="DSCF4729"><img src="https://farm5.staticflickr.com/4089/35537582751_36d1ea6fd8_b.jpg" alt="DSCF4729"></a>
+<a href="https://www.flickr.com/photos/acapelo/34858935663/in/photostream" target="_blank" title="DSCF4660"><img src="https://farm5.staticflickr.com/4083/34858935663_bbc0578da8_b.jpg" alt="DSCF4660"></a>
+<a href="https://www.flickr.com/photos/acapelo/34826826124/in/photostream" target="_blank" title="DSCF4631"><img src="https://farm5.staticflickr.com/4281/34826826124_000e3b95d5_b.jpg" alt="DSCF4631"></a>
+<a href="https://www.flickr.com/photos/acapelo/35280774500/in/photostream" target="_blank" title="DSCF4604"><img src="https://farm5.staticflickr.com/4211/35280774500_5a83bfd316_b.jpg" alt="DSCF4604"></a>
+<a href="https://www.flickr.com/photos/acapelo/35537530691/in/photostream" target="_blank" title="DSCF4599"><img src="https://farm5.staticflickr.com/4277/35537530691_0f6ff78cef_b.jpg" alt="DSCF4599"></a>
+<a href="https://www.flickr.com/photos/acapelo/35667981595/in/photostream" target="_blank" title="DSCF4571"><img src="https://farm5.staticflickr.com/4024/35667981595_f30ef62eb4_b.jpg" alt="DSCF4571"></a>
+<a href="https://www.flickr.com/photos/acapelo/34826752064/in/photostream" target="_blank" title="DSCF4559"><img src="https://farm5.staticflickr.com/4055/34826752064_40982f28d3_b.jpg" alt="DSCF4559"></a>
+<a href="https://www.flickr.com/photos/acapelo/35280686090/in/photostream" target="_blank" title="DSCF4498"><img src="https://farm5.staticflickr.com/4108/35280686090_964ee47107_b.jpg" alt="DSCF4498"></a>
+<a href="https://www.flickr.com/photos/acapelo/34858858553/in/photostream" target="_blank" title="1"><img src="https://farm5.staticflickr.com/4208/34858858553_d6ece0bdfc_b.jpg" alt="1"></a>
 
 Was invited to a Heavy Metal concert and manage to get out of there alive
 

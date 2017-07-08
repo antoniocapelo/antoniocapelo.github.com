@@ -29,3 +29,6 @@ homepage:		  http://www.capelo.me
 homepageName:		  capelo.me
 
 rssfeed:		  http://feeds.feedburner.com/CapeloIsBlogging
+
+# Gems
+plugins: [jekyll-paginate]
