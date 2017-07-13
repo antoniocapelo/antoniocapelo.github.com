@@ -99,10 +99,12 @@ h2 {
 }
 h3 {
   margin-top: 1.5rem;
+  margin-bottom: 1rem;
   font-size: 1.5rem;
 }
 h4, h5, h6 {
   margin-top: 1rem;
+  margin-bottom: 0.5rem;
   font-size: 1.25rem;
 }
 
@@ -279,7 +281,7 @@ blockquote p:last-child {
     }
     .post img.vertical {
         width: 50vw;
-        left: calc(-25vw + 50%);
+        left: 0;
     }
 }
 
