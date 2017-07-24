@@ -103,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
 .masthead {
   padding-top:    1rem;
   padding-bottom: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 .masthead-title {
@@ -111,6 +111,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
   color: #444;
   text-align: left;
+  text-overflow: ellipsis;
+  word-wrap: normal;
+  word-break: break-word;
+  overflow: hidden;
 }
 
 .masthead-title a {
@@ -126,7 +130,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 48em) {
   .masthead-title {
-    text-align: center;
+    padding-right: 20px;
   }
   .masthead-title small {
     display: none;

@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
 }
 h1 {
-  font-size: 2.6rem;
+  font-size: 1.8rem;
 }
 h2 {
   margin-top: 1rem;
@@ -306,8 +306,8 @@ blockquote p:last-child {
     min-height: 400px;
     /*-webkit-filter: blur(3px);*/
     /*filter: blur(3px);*/
-    -webkit-filter: blur(1px) grayscale(1) brightness(1.5);
-    filter: blur(1px) grayscale(1) brightness(1.5);
+    -webkit-filter: grayscale(1) brightness(0.3);
+    filter: grayscale(1) brightness(0.3);
     transform: scale(1.03);
 }
 
@@ -318,8 +318,9 @@ blockquote p:last-child {
     position: absolute;
     left: 50%;
     top: 40px;
-    font-size: 80px;
-    padding: 10px;
+    font-size: 2rem;
+    padding: 10px 14px;
+    letter-spacing: 1px;
     transform: translateX(-50%);
 }
 
@@ -357,7 +358,7 @@ blockquote p:last-child {
         text-align: center;
     }
     .post-page .post-title {
-        font-size: 46px;
+        font-size: 38px;
         width: 80%;
         text-align: center;
         left: 0;
@@ -367,6 +368,9 @@ blockquote p:last-child {
         display: inline-block;
         position: relative;
         margin-bottom: 20px;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        word-break: break-word;
     }
 
     .post-metadata {
