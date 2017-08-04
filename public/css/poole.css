@@ -246,6 +246,11 @@ blockquote p:last-child {
     margin-top: 2rem;
 }
 
+.post .coverpic {
+    width: 100%;
+    left: 0;
+}
+
 .post img {
   display: block;
   margin-bottom: 5px;
@@ -485,6 +490,20 @@ tbody tr:nth-child(odd) th {
 .page,
 .post {
   margin-bottom: 4em;
+}
+
+.posts {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.post {
+    flex: 1 0 50%;
+    display: flex;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding-right: 30px;
+    flex-direction: column;
 }
 
 /* Blog post or page title */

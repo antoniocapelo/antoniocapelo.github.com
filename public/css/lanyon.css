@@ -309,9 +309,12 @@ a.sidebar-nav-item:focus {
  * page is wrapped in `.page` and is only used on the page layout.
  */
 
-.page,
-.post {
+.page {
   margin-bottom: 3.5em;
+}
+
+.post {
+  margin-bottom: 0.5em;
 }
 
 #twitter-widget-0 {
@@ -334,6 +337,7 @@ a.sidebar-nav-item:focus {
   margin-top: 10px;
   margin-bottom: 0rem;
   color: #9a9a9a;
+  font-size: 85%;
 }
 
 /* Related posts */
@@ -641,6 +645,10 @@ a.pagination-item:hover {
   margin-bottom: 0.5rem;
 }
 
+.summary:first-letter {
+    font-size: 200%;
+}
+
 .read-more {
   font-family: 'PT Sans';
   font-size: 0.9em;
@@ -712,6 +720,10 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
+}
+
+h1 {
+    font-size: 28px;
 }
 
 .post-image-link {
