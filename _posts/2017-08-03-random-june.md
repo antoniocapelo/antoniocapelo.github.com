@@ -1,7 +1,7 @@
 ---
 title: Random June
 layout: post
-summary: Primavera, S. João and other random shots.
+summary: Primavera, S. Joao and other random shots.
 image: "/img/random-june/cover.jpg"
 category: photography
 tags:
