@@ -38,7 +38,6 @@ tags:
 <a href="https://www.flickr.com/photos/acapelo/36272588895/in/photostream" target="_blank" title="Primavera Sounds"><img src="https://farm5.staticflickr.com/4298/36272588895_3abb0e8dab_b.jpg" alt="Primavera Sounds"></a>
 <a href="https://www.flickr.com/photos/acapelo/36139312661/in/photostream" target="_blank" title="Primavera Sounds"><img src="https://farm5.staticflickr.com/4314/36139312661_1e2d9b6f38_b.jpg" alt="Primavera Sounds"></a>
 <a href="https://www.flickr.com/photos/acapelo/35878211650/in/photostream" target="_blank" title="Primavera Sounds"><img src="https://farm5.staticflickr.com/4300/35878211650_7a2cec5aff_b.jpg" alt="Primavera Sounds"></a>
-<a href="https://www.flickr.com/photos/acapelo/35468374633/in/photostream" target="_blank" title="DSCF9381"><img src="https://farm5.staticflickr.com/4320/35468374633_440e583ea9_b.jpg" alt="DSCF9381"></a>
 
 ### São João is here
 
