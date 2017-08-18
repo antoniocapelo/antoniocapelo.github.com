@@ -1,7 +1,7 @@
 ---
 title: Talk at Techinporto
 layout: post
-summary: shared some thoughs about 'React and the path to Sanity Driven Development'
+summary: shared some thoughts about 'React and the path to Sanity Driven Development'
 image: "/img/talk-at-techinporto/cover.png"
 category: coding
 tags:
