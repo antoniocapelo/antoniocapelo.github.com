@@ -1,0 +1,570 @@
+/* ========================================================================
+    Reboot copy pasted from Bootstrap v4.
+
+    Normalization of HTML elements, manually forked from Normalize.css to remove
+    styles targeting irrelevant browsers while applying new styles.
+    See: https://v4-alpha.getbootstrap.com/content/reboot/
+
+    Normalize is licensed MIT. https://github.com/necolas/normalize.css
+======================================================================== */ 
+
+/* stylelint-disable */
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #292b2c;
+    background-color: #fff;
+}
+
+[tabindex="-1"]:focus {
+    outline: none !important;
+}
+
+hr {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+abbr[title] {
+    text-decoration: underline;
+    text-decoration: underline dotted;
+    cursor: help;
+    border-bottom: 0;
+}
+
+address {
+    margin-bottom: 1rem;
+    font-style: normal;
+    line-height: inherit;
+}
+
+ol,
+ul,
+dl {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+    margin-bottom: 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-bottom: .5rem;
+    margin-left: 0;
+}
+
+blockquote {
+    margin: 0 0 1rem;
+}
+
+dfn {
+    font-style: italic;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    position: relative;
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -.25em;
+}
+
+sup {
+    top: -.5em;
+}
+
+a {
+    color: #0275d8;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+a:hover {
+    color: #014c8c;
+    text-decoration: underline;
+}
+
+a:not([href]):not([tabindex]):focus {
+    outline: 0;
+}
+
+pre,
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+pre code {
+    font-size: 0.8em;
+}
+
+pre {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    overflow: auto;
+}
+
+figure {
+    margin: 0 0 1rem;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    max-width: 100%;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+a,
+area,
+button,
+[role="button"],
+input,
+label,
+select,
+summary,
+textarea {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+caption {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    color: #636c72;
+    text-align: left;
+    caption-side: bottom;
+}
+
+th {
+    text-align: left;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+button:focus {
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    padding: 0;
+    border-style: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input[type="radio"]:disabled,
+input[type="checkbox"]:disabled {
+    cursor: not-allowed;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+    -webkit-appearance: listbox;
+}
+
+textarea {
+    overflow: auto;
+    resize: vertical;
+}
+
+fieldset {
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+legend {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+    line-height: inherit;
+    color: inherit;
+    white-space: normal;
+}
+
+progress {
+    vertical-align: baseline;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type="search"] {
+    outline-offset: -2px;
+    -webkit-appearance: none;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    font: inherit;
+    -webkit-appearance: button;
+}
+
+output {
+    display: inline-block;
+}
+
+summary {
+    display: list-item;
+}
+
+template {
+    display: none;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+html {
+    /* font-size: 100%; */
+    font-size: calc(0.8em + 1vw);
+    line-height: 1.5;
+}
+
+/* ========================================================================
+   Variables
+======================================================================== */ 
+:root {
+    /* ideal line length 66chrs -> max width 33rem */
+    --max-width-content: 33rem;
+    --max-width-wrap: var(--max-width-content);
+    
+    /* Typography variables */
+    --size-mod-4: 2rem; /* 3.375rem */
+    --size-mod-3: 1.85rem; /* 2.25rem */
+    --size-mod-2: 1.55rem; /* 1.5rem */
+    --size-mod-1: 1rem; /* 1rem */
+
+    /* Vertical spacing */
+    --vertical-spacing: 1.5;
+
+    /* Colors */
+    --base: #ddd;
+    --black: #3f3f3f;
+    --gray0: #f9f9f9;
+    --gray1: #ededed;
+    --gray2: #e0e0e0;
+    --gray3: #d2d2d2;
+    --gray4: #c3c3c3;
+    --gray5: #b2b2b2;
+    --gray6: #9f9f9f;
+    --gray7: #888888;
+    --gray8: #6c6c6c;
+    --gray9: #3f3f3f;
+    --gray20: #f9f9f9;
+    --gray21: #f4f4f4;
+    --gray22: #eeeeee;
+    --gray23: #e9e9e9;
+    --gray24: #e3e3e3;
+    --gray25: #dddddd;
+    --gray26: #c8c8c8;
+    --gray27: #afafaf;
+    --gray28: #929292;
+    --gray29: #6a6a6a
+}
+
+/* ========================================================================
+   Typography
+======================================================================== */ 
+
+body {
+    color: var(--black);
+    background-color: var(--gray0);
+}
+
+blockquote {
+  padding: .5rem 1rem;
+  border-left: .25rem solid var(--gray2);
+}
+
+h1 {
+    font-size: var(--size-mod-4);
+}
+
+h2 {
+    font-size: var(--size-mod-3);
+}
+
+h3 {
+    font-size: var(--size-mod-2);
+}
+
+h4, h5, h6 {
+    font-size: var(--size-mod-1);
+}
+
+@media (min-width: 1280px) {
+    /* 0.8 + 1280vw == 1em + 1.28 == 2.08 */
+    html {
+        font-size: 2.08em;
+    }
+}
+
+a {
+    color: var(--gray9);
+}
+
+a:hover, a:focus, a:active { 
+    color: var(--gray8);
+}
+
+p a, p a:hover, p a:focus, p a:active {
+    text-decoration: none;
+    text-shadow: 0.05em 0 0 var(--gray0), -0.05em 0 0 var(--gray0),
+    0 0.05em 0 var(--gray0), 0 -0.05em 0 var(--gray0), 0.1em 0 0 var(--gray0), -0.1em 0 0 var(--gray0), 0 0.1em 0 var(--gray0), 0 -0.1em 0 var(--gray0);
+    background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
+    background-repeat: repeat-x; background-position: bottom 0.05em center; background-size: 100% 0.05em;
+}
+
+h1 a, h1 a:hover, h1 a:focus, h1 a:active, 
+h2 a, h2 a:hover, h2 a:focus, h2 a:active {
+    text-decoration: none;
+    text-shadow: 0.08em 0 0 var(--gray0), -0.08em 0 0 var(--gray0),
+    0 0.08em 0 var(--gray0), 0 -0.08em 0 var(--gray0), 0.1em 0 0 var(--gray0), -0.1em 0 0 var(--gray0), 0 0.1em 0 var(--gray0), 0 -0.1em 0 var(--gray0);
+    background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
+    background-repeat: repeat-x; background-position: bottom 0.04em center; background-size: 100% 0.08em;
+}
+
+h1 a:hover, h1 a:focus, h1 a:active, 
+h2 a:hover, h2 a:focus, h2 a:active,
+p a:hover, p a:focus, p a:active {
+    background-image: linear-gradient(to right, var(--gray8) 0%, var(--gray8) 100%);
+}
+
+time, caption {
+    font-size: 0.867rem;
+}
+
+small {
+    font-size: 0.443rem;
+}
+
+/* ========================================================================
+    Accessibility
+======================================================================== */ 
+
+[href="#content"] {
+    position: absolute;
+    top: 0;
+    right: 100%; /* moves off screen */
+}
+
+[href="#content"]:focus {
+    right: auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+/* ========================================================================
+    Layout
+======================================================================== */ 
+.wrap {
+    max-width: var(--max-width-wrap);
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+main {
+    max-width: 33rem;
+    margin: 0 auto;
+}
+
+main * + * {
+    margin-top: 1.5rem;
+}
+
+li, dt, dd, br, th, td, li ul { 
+    margin-top: 0;
+}
+
+/* ========================================================================
+    Home
+======================================================================== */ 
+
+.coverpic {
+    width: 100%;
+}
+
+.profpic {
+    margin: 50px auto;
+    max-width: 300px;
+    border-radius: 50%;
+    width: 100%;
+    padding: 0 20px
+}
+
+.read-more {
+    margin-top: -1rem;
+}
+
+/* ========================================================================
+    Posts
+======================================================================== */ 
+
+p img,
+p a img {
+    display: block;
+    width: 100%;
+    max-width: 28rem;
+    margin: 0 auto;
+}
+
+.post-page caption {
+    text-align: center;
+}
+
+.post-page a + em {
+    text-align: center;
+    display: block;
+    margin-top: 0;
+}
+
+.post-title {
+    text-align: center;
+}
+
+/* ========================================================================
+    Utilities
+======================================================================== */ 
+.release {
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+}
+
+/* ========================================================================
+    Print Styles
+======================================================================== */ 
+
+@media print {
+    body > *:not(main) {
+        display: none; 
+    }
+}

@@ -10,7 +10,7 @@ title:            Capelo is blogging
 tagline:          ''
 description:      'thoughts on coding / sampling / analog photography / rest of life'
 url:              https://blog.capelo.me
-baseurl:          'https://blog.capelo.me/'
+baseurl:          '/'
 paginate:         7
 paginate_path: "/page:num/"
 

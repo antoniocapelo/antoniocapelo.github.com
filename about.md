@@ -5,7 +5,7 @@ title: Who Am I
 
 <img style="max-width:400px" src="/img/profpic.jpg" class="profpic">
 
-##My name is António Capelo
+My name is António Capelo
 
 I'm a former **Civil Engineer**, now **Software Engineer** and an all around good guy.
 <br>

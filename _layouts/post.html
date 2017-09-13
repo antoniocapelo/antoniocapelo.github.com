@@ -3,7 +3,7 @@ layout: default
 comments: true
 ---
 
-<div class="post{% if page.techPost %} tech-post{% endif %} post-page">    
+<section class="post{% if page.techPost %} tech-post{% endif %} post-page">    
     <div class="cover-container">
         {% if page.image %}
             <div  class="cover-back" style="background-image:url('{{ page.image }}');" >
@@ -11,25 +11,25 @@ comments: true
         {% endif %} 
         <h1 class="post-title">{{ page.title }}</h1>
 
-        <p class="post-metadata">
-        {% if page.category %}
-        Category: 
-        {% for cat in page.category %}
-        <a href="{{site.baseUrl}}/search?category={{cat | downcase | escape}}">{{ cat }}</a>
-        {% if forloop.last == false %},
-        {% endif %}
-        {% endfor%}
-
-        <br />
-        {% endif %}
-        Tags:
-        {% for tag in page.tags %}
-        <a href="{{site.baseUrl}}/search?tag={{tag | downcase | escape}}">{{tag}}</a>
-        {% if forloop.last == false %},
-        {% endif %}
-        {% endfor%}
-        <span class="post-date">{{ page.date | date_to_string }}</span>
-        </p>
+        <div class="post-metadata">
+            {% if page.category %}
+                <p>Category: 
+                    {% for cat in page.category %}
+                        <a href="{{site.baseUrl}}/search?category={{cat | downcase | escape}}">{{ cat }}</a>
+                        {% if forloop.last == false %},
+                        {% endif %}
+                    {% endfor%}
+                </p>
+            {% endif %}
+            <p>Tags:
+                {% for tag in page.tags %}
+                    <a href="{{site.baseUrl}}/search?tag={{tag | downcase | escape}}">{{tag}}</a>
+                    {% if forloop.last == false %},
+                    {% endif %}
+                {% endfor%}
+            </p>
+        </div>
+        <p class="post-date"><time datetime={{ page.date | date: "%d/%m/%Y" }}>{{ page.date | date_to_string }}</time></p>
     </div>
 
   {{ content }}

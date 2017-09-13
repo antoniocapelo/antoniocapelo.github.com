@@ -21,7 +21,9 @@ I only worked with vim when I was logged on a remote machine and my knowledge wa
     - **:w** saves the changes
     - **:q** exits the damn thing
 
-But after seeing [@andrewtjoslin](https://twitter.com/andrewtjoslin) rocking a ionic demo on [ng-europe](https://www.youtube.com/watch?v=ZjPRj2Vp74U) I thought *Hey maybe this vim thing isn't meant only for devops/ninjas/guys-who-spend-their-day-on-a-terminal*.
+But after seeing [@andrewtjoslin](https://twitter.com/andrewtjoslin) rocking a ionic demo on [ng-europe](https://www.youtube.com/watch?v=ZjPRj2Vp74U) I thought 
+
+> "Hey maybe this vim thing isn't meant only for devops/ninjas/guys-who-spend-their-day-on-a-terminal."
 
 So I decided to give it a try, being motivated after talking to [@miguelcnf](https://twitter.com/miguelcnf) who pointed me to the awesome Derek Wyatt [videos](http://derekwyatt.org/vim/tutorials/) and this is my experience.
 

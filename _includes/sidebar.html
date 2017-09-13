@@ -9,7 +9,10 @@
   </div>
 
   <nav class="sidebar-nav">
-    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="/">Home</a>
+    <ul>
+        <li>
+            <a {% if page.url == site.baseurl %} aria-describedBy="current" {% endif %} class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="/">Home</a>
+        </li>
 
     {% comment %}
       The code below dynamically generates a sidebar nav of pages with
@@ -20,13 +23,14 @@
     {% for node in pages_list %}
       {% if node.title != null %}
         {% if node.layout == "page" or node.layout == "about" %}
-          <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+        <li><a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" {% if page.url == node.url %} aria-describedBy="current" {% endif %} href="{{ node.url }}">{{ node.title }}</a></li>
         {% endif %}
       {% endif %}
     {% endfor %}
 
-    <a class="sidebar-nav-item" href="{{ site.github }}">GitHub</a>
-    <a class="sidebar-nav-item" href="{{ site.rssfeed }}" target="_blank">Feed <span class="typcn typcn-rss"></span></a>
+    <li><a class="sidebar-nav-item" href="{{ site.github }}">GitHub</a></li>
+    <li><a class="sidebar-nav-item" href="{{ site.rssfeed }}" target="_blank">Feed <span class="typcn typcn-rss"></span></a></li>
+    </ul>
   </nav>
 
   <div class="sidebar-item">
