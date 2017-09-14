@@ -3,25 +3,23 @@
 
   {% include head.html %}
 
-  <body class="layout-reverse">
+  <body>
 
     {% include sidebar.html %}
 
     <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
          content to avoid any CSS collisions with our real content. -->
     <div class="wrap">
-      <div class="masthead">
-        <div class="container">
-          <h3 class="masthead-title">
-            <a href="/" title="Home">{{ site.title }}</a>
-            <small>{{ site.tagline }}</small>
-          </h3>
-        </div>
-      </div>
+        <section class="header">
+             <h1 class="master-title">{{ site.title }}<small>{{ site.tagline }}</small>
+             </h1>
+             {% include nav.html %}
+        </section>
+     <a href="#content">Main Content</a>
 
-      <div class="container content">
+      <main id="content">
         {{ content }}
-      </div>
+      </main>
     </div>
 
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>

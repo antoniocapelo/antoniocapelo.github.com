@@ -6,11 +6,11 @@ highlighter:      rouge
 permalink:        pretty
 
 # Setup
-title:            Capelo is blogging
+title:            Capelo is writing
 tagline:          ''
 description:      'thoughts on coding / sampling / analog photography / rest of life'
 url:              https://blog.capelo.me
-baseurl:          'https://blog.capelo.me/'
+baseurl:          'https://blog.capelo.me'
 paginate:         7
 paginate_path: "/page:num/"
 

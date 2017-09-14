@@ -18,7 +18,8 @@ This post sums up the talk I did at [Mindera](http://mindera.com/), in one of ou
 
 ----
 
-##Why?
+## Why?
+
 On one hand, it's important to have some concepts present when approaching a project to test, mainly if we come from a different context.
 
 Besides that - personally - when switching from AngularJS (which as a framework has many features that make unit testing easy) to a jQuery-based project, I came into some obstacles while begining to unit test it, so in this presentation I also tried to document it.
@@ -28,6 +29,7 @@ Besides that - personally - when switching from AngularJS (which as a framework 
 ![cool](https://media.giphy.com/media/6htA45chmBJYI/giphy.gif)
 
 ### Advantages
+
 + unit tests can serve as a 'code' documentation of your running component (in case of a lack of documentation)
 + they give you more **confidence** on the code you're pushing to release
     + ensure that we're warned if new features/refactors break the expected behavior
@@ -36,6 +38,7 @@ Besides that - personally - when switching from AngularJS (which as a framework 
 
 
 ### and..
+
 * JavaScript is a dynamically typed language, we have no help from the compiler - more easier to break if something changes (or if we code it wrong)
 
 
@@ -44,33 +47,26 @@ Besides that - personally - when switching from AngularJS (which as a framework 
 
         // undefined is not a function
 
-<p class="centered">anyone?</p>
+<p style="text-align: center;">anyone?</p>
 
 
 ### Obstacles
-![Obstacle](https://media.giphy.com/media/dbtDDSvWErdf2/giphy.gif)
 
 * it takes time, and we got features to deliver - we have to make space (i.e. give adequate points to US's) on the sprint grooming
-
-
-![Obstacle](http://media.giphy.com/media/R6xi8dXsRhIjK/giphy.gif)
-
 * it can involve some refactoring when begining to test an already existing codebase - start as soon as possible
-
 
     ----
 
-##As the name implies,  test individually each app component
-
+## As the name implies,  test individually each app component
 
 * This means that when testing the **component X**, each interaction with components **Y** and **Z** will be mocked, because:
     * we're not testing the other components behavior, that belongs on Y and Z unit tests
     * we have control over our tests scenarios (component X state)
 
 
-###*Rule of thumb:*
-Test the returned value of *'public methods'* and current value of *'public properties'* of the component
+### *Rule of thumb:*
 
+Test the returned value of *'public methods'* and current value of *'public properties'* of the component
 
 ----
 
@@ -81,40 +77,38 @@ Consider this [sample app](http://htmlpreview.github.io/?https://github.com/anto
 ![Sample App](/img/a-taste-of-unit-testing/sample_app.png)
 
 
-
 ## Typical jQuery-ish code for this page
 
 ```javascript
-	$(document).ready(function(){
-		var listDiv = $('.available'),
-		myList      = $('.my-list'),
-		itemCount   = getItemCount( '.item' );
+$(document).ready(function(){
+  var listDiv = $('.available'),
+  myList      = $('.my-list'),
+  itemCount   = getItemCount( '.item' );
 
-		$(.items-count).html(itemCount);
+  $(.items-count).html(itemCount);
+    
+  listDiv.on('click',function(){
+    var $clickedEL = $(this);
+    $.ajax(...);
+    function onSucces() {
+      $clickedEL.remove();
+      var $newEl; 
+      itemCount+=1;
+      $(.items-count).html(itemCount);
+      $newEl = $('<li class="item">').text($clickedEL.text());
+      myList.append($newEL);
+    }
+  });
 
-		listDiv.on('click',function(){
-			var $clickedEL = $(this);
-			$.ajax(...);
-			function onSucces() {
-				$clickedEL.remove();
-				var $newEl; 
-				itemCount+=1;
-				$(.items-count).html(itemCount);
-				$newEl = $('<li class="item">').text($clickedEL.text());
-				myList.append($newEL);
-			}
-		});
-
-		function getItemCount( selector ){
-			return $( selector ).length;
-		}
-	});
+  function getItemCount( selector ){
+    return $( selector ).length;
+  }
+});
 ```
 
   ![disappointed](https://media.giphy.com/media/33iqmp5ATXT5m/giphy.gif)
   
-<h3 class="centered">(Not testable)</h3>
-
+<h3 style="text-align: center;">(Not testable)</h3>
 
 ### Why?
 
@@ -126,55 +120,53 @@ Consider this [sample app](http://htmlpreview.github.io/?https://github.com/anto
 
 ## Testability++
 
-<br>
-
 ```javascript
-	function MyListComponent($context) {
-		var compClasses = {
-			item: 'item'
-		};
-		var compSelectors = {
-			item : '.item',
-			component : '.my-list',
-			itemCount : 'item-count'
-		};
+  function MyListComponent($context) {
+    var compClasses = {
+      item: 'item'
+    };
+    var compSelectors = {
+      item : '.item',
+      component : '.my-list',
+      itemCount : 'item-count'
+    };
 
-		// Private
-		var $component = $context.find(compSelectors.component);
+    // Private
+    var $component = $context.find(compSelectors.component);
 
-		function initComponent() {
-			updateItemCount();
-		}
+    function initComponent() {
+      updateItemCount();
+    }
 
-		function updateItemCount() {
-			$context.find(compSelectors.itemCount).text(getItemCount());
-		}
+    function updateItemCount() {
+      $context.find(compSelectors.itemCount).text(getItemCount());
+    }
 
-		function getItemCount() {
-			return $context.find(compSelectors.item).length;
-		}
+    function getItemCount() {
+      return $context.find(compSelectors.item).length;
+    }
 
-		function buildItem(text) {
-			return $('<li>').addClass(compClasses.item).text(text);
-		}
+    function buildItem(text) {
+      return $('<li>').addClass(compClasses.item).text(text);
+    }
 
-		initComponent();
+    initComponent();
 
-		// Public API
-		this.addItem = function(text) {
-			$component.append(buildItem(text));
-			updateItemCount();
-		};
+    // Public API
+    this.addItem = function(text) {
+      $component.append(buildItem(text));
+      updateItemCount();
+    };
 
-		this.getItemCount = getItemCount;
+    this.getItemCount = getItemCount;
 
-	}
+  }
 
-	module.exports = {
-		create: function($context, handleAvailableListClick) {
-			return new AvailableListComponent($context, handleAvailableListClick);
-		}
-	};
+  module.exports = {
+    create: function($context, handleAvailableListClick) {
+      return new AvailableListComponent($context, handleAvailableListClick);
+    }
+  };
 ```
 
 ### What happened?
@@ -188,70 +180,67 @@ By creating the ``MyListComponent`` we can:
 
 
 * besides that, we:
-	* increased **reusability**
-	* separated concerns
-	* are happier :)
+  * increased **reusability**
+  * separated concerns
+  * are happier :)
 
 ![happier](https://media.giphy.com/media/YVPkjfe2E0XAs/giphy.gif)
 
-
-
 We can break it down **even more** - on our current project, we started creating a file for 'business' logic and a file for 'view' logic (which includes visual 'components') for each app module
-
 
 ### Applying the same logic:
 
 ```javascript
-	// Available Component Definition
-	function AvailableComponent($context, handleAvailableListClick) {
-		var compClasses = {
-				...
-		};
-		var compSelectors = {
-				...
-		};
+  // Available Component Definition
+  function AvailableComponent($context, handleAvailableListClick) {
+    var compClasses = {
+        ...
+    };
+    var compSelectors = {
+        ...
+    };
 
-		// Private
-		var $component = $context.find(compSelectors.component);
+    // Private
+    var $component = $context.find(compSelectors.component);
 
-		// Public
-		this.removeItem = function($item) {
-				...
-		};
+    // Public
+    this.removeItem = function($item) {
+        ...
+    };
 
-		// delegate click handler
-		$component.on('click', handleAvailableListClick);
-	}
+    // delegate click handler
+    $component.on('click', handleAvailableListClick);
+  }
 
-	module.exports = {
-		create: function($context, handleAvailableListClick) {
-			return new AvailableListComponent($context, handleAvailableListClick);
-		}
-	};
+  module.exports = {
+    create: function($context, handleAvailableListClick) {
+      return new AvailableListComponent($context, handleAvailableListClick);
+    }
+  };
 ```
 
 ```javascript
-	// ListChooser Page definition
-	function ListChooserPage() {
-		var $page = $('#container');
+  // ListChooser Page definition
+  function ListChooserPage() {
+    var $page = $('#container');
 
-		var myListComponent= MyListComponent.create($page);
-		var availableListComponent = AvailableListComponent.create($page, handleAvailableListClick);
+    var myListComponent= MyListComponent.create($page);
+    var availableListComponent = AvailableListComponent.create($page, handleAvailableListClick);
 
-	 function handleAvailableListClick() {
-		var $clickedEL = $(this);
-		$.ajax(...);
-		function onSuccess() {
-			availableComponent.removItem($clickedEL);
-			myListComponent.addItem($clickedEL.text());
-		}
-	};
+   function handleAvailableListClick() {
+    var $clickedEL = $(this);
+    $.ajax(...);
+    function onSuccess() {
+      availableComponent.removItem($clickedEL);
+      myListComponent.addItem($clickedEL.text());
+    }
+  };
 
-		// Public 
-		this.handleAvailableListClick = handleAvailableListClick;
-	}
+    // Public 
+    this.handleAvailableListClick = handleAvailableListClick;
+  }
 
-	ListChooserPage.create();
+  ListChooserPage.create();
 ```
 
 ----
@@ -259,29 +248,29 @@ We can break it down **even more** - on our current project, we started creating
 ## What to do with this?
 
 ### Now we can test the *AvailableList*  component more easily<a name="test-available"></a>
+
 ### At first glance:
+
 * check if it's being correctly initiated:
-	* if it finds the items throught the selectors
-	* if the ``removeItem`` public method has the expected behavior
+  * if it finds the items throught the selectors
+  * if the ``removeItem`` public method has the expected behavior
 * check if the click event delegation is correctly set up
  
 
-
 ### Testing the *ListChooserPage* Component:<a name="test-my-list"></a>
+
 * check if it initiates correctly
-	* if searches (and finds) its selectors
-	* if instantiates its dependencies
+  * if searches (and finds) its selectors
+  * if instantiates its dependencies
 * if its click handler function is called when clicking its bound element and if it does what's expected:
-	* ajax call with certain parameters and on success:
-	* call availableComponent ``removeItem``
-	* call myListComponent ``addItem``
-
-
+  * ajax call with certain parameters and on success:
+  * call availableComponent ``removeItem``
+  * call myListComponent ``addItem``
 
 ### In the end we realize that
+
 * *List* component became responsible for its internal representational logic + internal jQuery actions and for wiring up its event handlers - that's what we're going to test
 * *Page* component is in charge of the page logic, making ajax calls, setting up the event handler functions, etc - that's what we're going to test
-
 
 ----
 
@@ -306,23 +295,23 @@ A spec with all true expectations is a passing spec. A spec with one or more fal
 ### What it looks like
 
 ```javascript
-	describe("the component/behavior we're testing", function() {
-		var myComp;
+  describe("the component/behavior we're testing", function() {
+    var myComp;
 
-		beforeEach() {
-			myComp = new myComponent();
-		}
+    beforeEach() {
+      myComp = new myComponent();
+    }
 
-		it("should return true when getBoolValue is called", function() {
-			var fnReturnValue = myComp.getBoolValue();
+    it("should return true when getBoolValue is called", function() {
+      var fnReturnValue = myComp.getBoolValue();
 
-			expect(fnReturnValue).toBe(true);
-		});
-	});
+      expect(fnReturnValue).toBe(true);
+    });
+  });
 ```
 
-
 ### Matchers 
+
 #### *helper functions used in expectations*
 
 
@@ -336,8 +325,8 @@ A spec with all true expectations is a passing spec. A spec with one or more fal
     .not.to....();
 ```
 
-
 ### spies
+
 Spies are utilities for stubbing any function and tracking calls to it and all arguments.
 
 A spy only exists in the describe or it block in which it is defined, and will be removed after each spec. 
@@ -345,16 +334,18 @@ A spy only exists in the describe or it block in which it is defined, and will b
 
 
 #### how they look like
-```javascript
-	it("should call the myComp method", function() {
-		spyOn(myComp, 'getBoolValue');
-		myComp.methodThatAlsoCallsGetBoolValue();
 
-		expect(myComp.getBoolValue).toHaveBeenCalled();
-	});
+```javascript
+  it("should call the myComp method", function() {
+    spyOn(myComp, 'getBoolValue');
+    myComp.methodThatAlsoCallsGetBoolValue();
+
+    expect(myComp.getBoolValue).toHaveBeenCalled();
+  });
 ```
 
 ### fixtures
+
 On **AngularJS**, testing is given straight out-of-the-box, the framework itself can detect templates used in directives, **ngMock** module can inject and mock dependencies.
 
 An initial approach is well documented [here](https://docs.angularjs.org/guide/unit-testing).
@@ -370,25 +361,26 @@ Also, for testing components with DOM logic, it's necessary to inject HTML conte
 
 * [Karma](http://karma-runner.github.io/) - 'Spectacular' Test Runner for Javascript
 * Test runners
-	* [mocha](https://mochajs.org/) - test framework for JS, normally used with:
-		* [chai](http://chaijs.com/) - assertion library (stuff lik ``assert``, ``should`` and ``expect``)
-		* [sinon](http://sinonjs.org/) - test spies, stubs and mocks
-	* [Jasmine](jasmine.github.io) - simpler solution (although less powerfull) gives you a behavior-driven development testing framework + ``expect``, spies, etc in one package
+  * [mocha](https://mochajs.org/) - test framework for JS, normally used with:
+    * [chai](http://chaijs.com/) - assertion library (stuff lik ``assert``, ``should`` and ``expect``)
+    * [sinon](http://sinonjs.org/) - test spies, stubs and mocks
+  * [Jasmine](jasmine.github.io) - simpler solution (although less powerfull) gives you a behavior-driven development testing framework + ``expect``, spies, etc in one package
 * [Karma-Browserify](https://github.com/nikku/karma-browserify) - Karma plugin for testing our browserifiy code (used in this demo)
 * [Jasmine-jQuery](https://github.com/velesin/jasmine-jquery) - set of matchers and fixture loaders for jquery
 * Reporters
-	* [Karma Coverage](https://github.com/karma-runner/karma-coverage) - gives statement, line, function and branch coverage
-	* and more...
+  * [Karma Coverage](https://github.com/karma-runner/karma-coverage) - gives statement, line, function and branch coverage
+  * and more...
 
 ----
 
 # Let's do some testing, then!
+
 ![do it!](https://media.giphy.com/media/87xihBthJ1DkA/giphy.gif)
 
 
 ## Testing *ListChooserPage* Component
-Remember what to test, as listed [here](#test-available).
 
+Remember what to test, as listed [here](#test-available).
 
 ```javascript
     describe('ListChooserPage', function () {
@@ -462,6 +454,7 @@ Remember what to test, as listed [here](#test-available).
 
 
 ## Testing *AvailableList* Component
+
 Remember what to test, as listed [here](#test-my-list).
 
 ```javascript
@@ -509,8 +502,8 @@ It's always important to find a balance on what to test and where, and that depe
 
 ![Folder Structure](/img/a-taste-of-unit-testing/demo_structure.png)
 
-
 ### Entry point: karma.conf.js
+
 #### Main configurations are the following:
 
 ```javascript
@@ -541,7 +534,6 @@ It's always important to find a balance on what to test and where, and that depe
 
 #### Running tests, the simple way
 
-
 ```javascript
         // on package.json
         ...
@@ -555,6 +547,7 @@ It's always important to find a balance on what to test and where, and that depe
 
 
 ### But you can use whatever automation tool you prefer, it's very flexible
+
 ![flexible](https://media.giphy.com/media/D7MPavzY5YsKY/giphy.gif)
 
 
@@ -566,7 +559,8 @@ It's always important to find a balance on what to test and where, and that depe
 
 ----
 
-##Final Thoughts:
+## Final Thoughts
+
 At the end, not all is golden, there are still some obstacles that we need to be prepared for, and constantly try to come up with clever ways to overcome them:
 
 * having visual components helps a lot on separating the code for representational logic and business logic, however when testing the visual components it's important to use the fixtures with caution and thought, as they can become easily outdated
@@ -578,6 +572,7 @@ At the end, not all is golden, there are still some obstacles that we need to be
 ----
 
 ## Reference links
+
 * [Introduction To JavaScript Unit Testing](http://www.smashingmagazine.com/2012/06/introduction-to-javascript-unit-testing/)
 * [Writing Testable JavaScript](https://www.youtube.com/watch?v=OzjogCFO4Zo)
 * [Unit Testing JavaScript Using Jasmine ](http://bittersweetryan.github.io/jasmine-presentation)
@@ -589,7 +584,6 @@ Feel the need to start experimenting with unit tests?
 ``git checkout`` [this](https://github.com/antoniocapelo/taste-of-client-side-unit-testing)
 
 ![git repo](http://img-comment-lol.9cache.com/media/10cf151a142541505822654970_700wa_0.gif)
-
 
 
 See you soon,

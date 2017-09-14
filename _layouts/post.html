@@ -3,89 +3,87 @@ layout: default
 comments: true
 ---
 
-<div class="post{% if page.techPost %} tech-post{% endif %} post-page">    
+<section class="post{% if page.techPost %} tech-post{% endif %} post-page">    
     <div class="cover-container">
         {% if page.image %}
             <div  class="cover-back" style="background-image:url('{{ page.image }}');" >
             </div>
         {% endif %} 
-        <h1 class="post-title">{{ page.title }}</h1>
+        <h2 class="post-title">{{ page.title }}</h2>
 
-        <p class="post-metadata">
-        {% if page.category %}
-        Category: 
-        {% for cat in page.category %}
-        <a href="{{site.baseUrl}}/search?category={{cat | downcase | escape}}">{{ cat }}</a>
-        {% if forloop.last == false %},
-        {% endif %}
-        {% endfor%}
+        <p class="post-date"><time datetime={{ page.date }}>{{ page.date | date_to_string }}</time></p>
 
-        <br />
-        {% endif %}
-        Tags:
-        {% for tag in page.tags %}
-        <a href="{{site.baseUrl}}/search?tag={{tag | downcase | escape}}">{{tag}}</a>
-        {% if forloop.last == false %},
-        {% endif %}
-        {% endfor%}
-        <span class="post-date">{{ page.date | date_to_string }}</span>
-        </p>
+        <div class="post-metadata">
+            {% if page.category %}
+                <p class="post-category">{% for cat in page.category %}
+                        <a href="{{site.baseUrl}}/search?category={{cat | downcase | escape}}">{{ cat }}</a>
+                        {% if forloop.last == false %},
+                        {% endif %}
+                    {% endfor%}
+                </p>
+            {% endif %}
+            <p class="post-tags">
+                {% for tag in page.tags %}
+                    <a href="{{site.baseUrl}}/search?tag={{tag | downcase | escape}}">{{tag}}</a>
+                    {% if forloop.last == false %},
+                    {% endif %}
+                {% endfor%}
+            </p>
+        </div>
     </div>
 
   {{ content }}
 
-</div>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ site.author.twitter }}">Tweet</a>
 
-<a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ site.author.twitter }}">Tweet</a>
+    {% if page.comments %}
+       <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'capeloisblogging'; // required: replace example with your forum shortname
 
-{% if page.comments %}
-   <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'capeloisblogging'; // required: replace example with your forum shortname
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        
+    {% endif %}
+    <div>
+    <div class="navigation-links">
+      {% if page.previous %}
+      <div>
+          <span>Read Previous: </span>
+          <a class="navigate-anchor {% if page.next == null %} one{% endif %}" href="{{page.previous.url}}" >
+          <span><i>"{{page.previous.title}}"</i></span>
+        </a>
+      </div>
+      {% endif %}
+      {% if page.next %}
+          <div>
+              <span class="tip">Read Next: </span>
+              <a class="navigate-anchor {% if page.previous == null %} one{% endif %}" href="{{page.next.url}}" >
+                  <span class="nav-title"><i>"{{page.next.title}}"</i></span>
+              </a>
+          </div>
+      {% endif %}
+    </div>
+      <h5>Related Posts</h5>
+      <ul class="related-posts">
+        {% for post in site.related_posts limit:3 %}
+          <li>
+              <a href="{{ post.url }}">{{ post.title }}</a> <small>{{ post.date | date_to_string }}</small>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
 
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
+    <script type="text/javascript" charset="utf-8">
+        {% include post.js %}
     </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    
-{% endif %}
-<div class="related">
-<div class="navigation-links">
-  {% if page.previous %}
-    <a class="navigate-anchor {% if page.next == null %} one{% endif %}" href="{{page.previous.url}}" >
-      <span class="tip">Read Previous</span>
-      <span class="nav-title"><i>"{{page.previous.title}}"</i></span>
-    </a>
-  {% endif %}
-  {% if page.next %}
-  <a class="navigate-anchor {% if page.previous == null %} one{% endif %}" href="{{page.next.url}}" >
-    <span class="tip">Read Next</span>
-    <span class="nav-title"><i>"{{page.next.title}}"</i></span>
-  </a>
-  {% endif %}
-</div>
-  <h2>Related Posts</h2>
-  <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
-      <li>
-        <h3>
-          <a href="{{ post.url }}">
-            {{ post.title }}
-            <small>{{ post.date | date_to_string }}</small>
-          </a>
-        </h3>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
 
-<script type="text/javascript" charset="utf-8">
-{% include post.js %}
-  
-</script>
+</div>
 

@@ -6,25 +6,20 @@
     function imgLoaded(ev) {
         var img = ev.target
         if (img) {
-
             if (img.height > img.width) {
-                if (img.classList) {
-                    img.classList.add('vertical');
-                }
-                else {
-                    img.className += ' ' + 'vertical';
-                }
+                img.style.width = 'auto';
+                img.style.maxHeight = '25rem';
             }
         }
     }
 
     ready(function() {
-        var imageElements = document.querySelectorAll('.post-page img')
+        var imageElements = document.querySelectorAll('.post-page a img')
         imageElements.forEach(function(img) {
             img.addEventListener("load", imgLoaded);
 
             if (img.height && img.width) {
-                imgLoaded(img);
+                imgLoaded({ target: img });
             }
         });
     });

@@ -90,8 +90,7 @@ Now, on to the photos!
 <a href="https://farm9.staticflickr.com/8855/18119960218_18c9bc8b81_b.jpg"><img src="https://farm9.staticflickr.com/8855/18119960218_18c9bc8b81_b.jpg" /></a>
 
 <a href="https://farm8.staticflickr.com/7771/18120183130_f61312e97f_b.jpg"><img src="https://farm8.staticflickr.com/7771/18120183130_f61312e97f_b.jpg" /></a>
-
-Coffee&Socks
+*Coffee&Socks*
 
 <a href="https://farm1.staticflickr.com/340/18120176690_252280687d_b.jpg"><img src="https://farm1.staticflickr.com/340/18120176690_252280687d_b.jpg" /></a>
 
@@ -102,23 +101,19 @@ Coffee&Socks
 <a href="https://farm8.staticflickr.com/7799/18121829399_c04af4af93_b.jpg"><img src="https://farm8.staticflickr.com/7799/18121829399_c04af4af93_b.jpg" /></a>
 
 <a href="https://farm9.staticflickr.com/8834/17685396034_d64f79bffa_b.jpg"><img src="https://farm9.staticflickr.com/8834/17685396034_d64f79bffa_b.jpg" /></a>
-
-Backyard
+*Backyard*
 
 <a href="https://farm9.staticflickr.com/8799/18120244610_c4d87e047d_b.jpg"><img src="https://farm9.staticflickr.com/8799/18120244610_c4d87e047d_b.jpg" /></a>
-
-Back Home
+*Back Home*
 
 <a href="https://farm8.staticflickr.com/7764/17687312063_eb71f354cc_b.jpg"><img src="https://farm8.staticflickr.com/7764/17687312063_eb71f354cc_b.jpg" /></a>
-
-V. Lima
+*V. Lima*
 
 <a href="https://farm8.staticflickr.com/7777/18308132185_3fc4ffe882_b.jpg"><img src="https://farm8.staticflickr.com/7777/18308132185_3fc4ffe882_b.jpg" /></a>
 
 <a href="https://farm9.staticflickr.com/8783/17685370814_fa0a2dc6f1_b.jpg"><img src="https://farm9.staticflickr.com/8783/17685370814_fa0a2dc6f1_b.jpg" /></a>
 
 <a href="https://farm1.staticflickr.com/299/17685330364_539e047543_b.jpg"><img src="https://farm1.staticflickr.com/299/17685330364_539e047543_b.jpg" /></a>
-
 
 See ya soon,
 

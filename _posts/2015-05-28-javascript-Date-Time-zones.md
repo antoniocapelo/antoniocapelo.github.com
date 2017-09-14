@@ -17,7 +17,7 @@ I'm writing this as a tip for developers working with javascript Date objects an
 
 A couple of days ago I had to work with some date operations and apparently everything was going well. However this detail missed me and it's the following.
 
-When looking at some **Date** [documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date), we can see that the **Date** Constructor accepts many types of arguments:
+When looking at some `Date` [documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date), we can see that the `Date` Constructor accepts many types of arguments:
 
  + none (creates a date representing the current time in the system's time zone)
  + Integer representing the number of ms since Unix Epoch
@@ -53,11 +53,10 @@ None of these is a clean solution as both involve some kind of string parsing. m
 
 So to sum it up:
 
-- new Date('2015-05-27T00:00’)
+- `new Date('2015-05-27T00:00’)`
     - As no time zone/offset is provided, the browser considers it **GMT**. Then it converts that date in GMT to the devices’ location.
 
-
-- new Date(2015, 04, 27)
+- `new Date(2015, 04, 27)`
     - No time zone is provided but with this signature the browser considers the device location so no conversion is made.
 
 Hope this helps some Frontend Dev's struggling with Dates and time zones, or at least serve as a reminder for myself :)

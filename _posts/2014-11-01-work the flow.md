@@ -16,7 +16,7 @@ tags:
 
 Even though it's a simple setup, I decided to write down the current workflow of my personal website development. I think it very straight forward, and it's the quickest way I found to quickly get it up and running, so it might help some dev's in the same situation.
 
-##So, What I wanted
+## So, What I wanted
 
 For my new website, I wanted to: 
 
@@ -32,7 +32,7 @@ The main idea would be:
 
 <img src="/img/schema.png">
 
-##AngularJS bootstrap
+## AngularJS bootstrap
 
 As usual, the quickest way to set up the AngularJS environment is by using a **yeoman generator**.
 
@@ -58,7 +58,7 @@ However, when it comes to have our site running in production, using a grunt ser
 		};
 		// This way, when running the grunt build task, which includes the copy:dist task, the production files are all copied to the server/dist folder
 
-##Express		
+## Express		
 
 For the nodeJS server, I used the [express](http://expressjs.com/) framework and its generator. To install them, run the following lines:
 
@@ -70,7 +70,7 @@ This creates the server-side app file and folder skeleton and installs all the d
 
 Finally I edited the default *app.js* file by basically removing the view engine setup (we won't use JadeLang), the routing setup (the routing will be made by Angular), the development error handler and by adding the 'static files serving' options. I put these changes on a [gist](https://gist.github.com/antoniocapelo/516c2ca7b9b053fa9e3a#file-edit_express_app-js) you can check it if you find it useful.
 
-###Serving the app with Dev / Prod environment.
+### Serving the app with Dev / Prod environment.
 
 I wanted to be able to run the nodeJS server with dev/prod environment, so I put two simple scripts on the /server's **package.json**:
 
@@ -82,13 +82,13 @@ I wanted to be able to run the nodeJS server with dev/prod environment, so I put
 
 This lets me type ``npm test`` or ``npm start`` to quickly run my server in development or production mode.
 
-##Keeping the code in sync
+## Keeping the code in sync
 
 One thing I'm enjoying with this setup is not having to mess with FTP apps. 
 
 I'm simply hosting my site code in a github repository and everytime a new 'version' is release, I just have to build it, ssh into my *droplet* and pull the latest changes. Since I'm running the server with **nodemon**, the file changes are detected and the site reflects the changes instantly.
 
-My site is an ongoing project, as I'm working on it when I have free time. You can check it [here](http://antoniocapelo.com/) and leave some feedback.
+My site is an ongoing project, as I'm working on it when I have free time. You can check it [here](http://capelo.me/) and leave some feedback.
 
 
 See you soon,
