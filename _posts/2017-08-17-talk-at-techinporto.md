@@ -23,7 +23,7 @@ It was a tricky talk to prepare since I didn't know the level of React profiency
 > I’ll be talking about imperative VS functional approaches to building UI, how we can use React to increase productivity and testability, and how that gets us closer to a sane frontend development.
 > (There’ll be a live demo. I may screw up.)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JCY1wDGcTCk" frameborder="0" allowfullscreen></iframe>
+<iframe style="display:block; margin: 0 auto;" width="560" height="315" src="https://www.youtube.com/embed/JCY1wDGcTCk" frameborder="0" allowfullscreen></iframe>
 
 A PDF version of the slides is [available]({{ site.baseurl }}public/react-and-the-path-to-sanity-driven-development.pdf) and if you're interested in the code used in this talk, it's available [here](https://github.com/antoniocapelo/simple-demo-tech-in-porto) and [here](https://github.com/antoniocapelo/audio-demo-tech-in-porto).
 

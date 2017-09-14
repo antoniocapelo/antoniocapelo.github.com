@@ -13,12 +13,13 @@ title: Home
             </a>
         </h2>
 
+        <p class="post-date"><time datetime={{ post.date }}>{{ post.date | date_to_string }}</time></p>
+
         {% if post.image %}
         <a href="{{ post.url }}" class="post-image-link">
             <img src="{{ post.image }}" class="coverpic" alt="Cover Picture for post {{ post.title }}">
         </a>
         {% endif %}
-        <time datetime="{{ post.date | date: "%d/%m/%Y" }}">{{ post.date | date_to_string }}</time>
         <p class="summary">
         {% if post.summary %}
             <i>{{ post.summary}}</i>

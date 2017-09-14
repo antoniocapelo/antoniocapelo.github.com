@@ -13,7 +13,7 @@
 html {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Lora', serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     -ms-overflow-style: scrollbar;
@@ -33,7 +33,7 @@ html {
 
 body {
     margin: 0;
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Lora', serif;
     font-size: 1rem;
     font-weight: normal;
     line-height: 1.5;
@@ -338,7 +338,7 @@ template {
 
 html {
     /* font-size: 100%; */
-    font-size: calc(0.8em + 1vw);
+    font-size: calc(0.6em + 1vw);
     line-height: 1.5;
 }
 
@@ -348,7 +348,7 @@ html {
 :root {
     /* ideal line length 66chrs -> max width 33rem */
     --max-width-content: 33rem;
-    --max-width-wrap: var(--max-width-content);
+    --max-width-wrap: 100%;
     
     /* Typography variables */
     --size-mod-4: 2rem; /* 3.375rem */
@@ -360,6 +360,7 @@ html {
     --vertical-spacing: 1.5;
 
     /* Colors */
+    --cta: #2980b9;
     --base: #ddd;
     --black: #3f3f3f;
     --gray0: #f9f9f9;
@@ -415,9 +416,9 @@ h4, h5, h6 {
 }
 
 @media (min-width: 1280px) {
-    /* 0.8 + 1280vw == 1em + 1.28 == 2.08 */
+    /* 0.6 + 1280vw == 0.6em + 1.28 == 1.88 */
     html {
-        font-size: 2.08em;
+        font-size: 1.88em;
     }
 }
 
@@ -426,7 +427,7 @@ a {
 }
 
 a:hover, a:focus, a:active { 
-    color: var(--gray8);
+    color: var(--gray9);
 }
 
 p a, p a:hover, p a:focus, p a:active {
@@ -434,22 +435,25 @@ p a, p a:hover, p a:focus, p a:active {
     text-shadow: 0.05em 0 0 var(--gray0), -0.05em 0 0 var(--gray0),
     0 0.05em 0 var(--gray0), 0 -0.05em 0 var(--gray0), 0.1em 0 0 var(--gray0), -0.1em 0 0 var(--gray0), 0 0.1em 0 var(--gray0), 0 -0.1em 0 var(--gray0);
     background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
-    background-repeat: repeat-x; background-position: bottom 0.05em center; background-size: 100% 0.05em;
+    background-repeat: repeat-x; background-position: bottom 0.05em center; background-size: 100% 0.08em;
 }
 
 h1 a, h1 a:hover, h1 a:focus, h1 a:active, 
-h2 a, h2 a:hover, h2 a:focus, h2 a:active {
+h2 a, h2 a:hover, h2 a:focus, h2 a:active,
+h3 a, h3 a:hover, h3 a:focus, h3 a:active {
     text-decoration: none;
-    text-shadow: 0.08em 0 0 var(--gray0), -0.08em 0 0 var(--gray0),
-    0 0.08em 0 var(--gray0), 0 -0.08em 0 var(--gray0), 0.1em 0 0 var(--gray0), -0.1em 0 0 var(--gray0), 0 0.1em 0 var(--gray0), 0 -0.1em 0 var(--gray0);
+    text-shadow: 0.07em 0 0 var(--gray0), -0.07em 0 0 var(--gray0),
+    0 0.07em 0 var(--gray0), 0 -0.07em 0 var(--gray0), 0.1em 0 0 var(--gray0), -0.1em 0 0 var(--gray0), 0 0.1em 0 var(--gray0), 0 -0.1em 0 var(--gray0);
     background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
-    background-repeat: repeat-x; background-position: bottom 0.04em center; background-size: 100% 0.08em;
+    background-repeat: repeat-x; background-position: bottom 0.04em center; background-size: 100% 0.07em;
 }
 
 h1 a:hover, h1 a:focus, h1 a:active, 
 h2 a:hover, h2 a:focus, h2 a:active,
+h3 a:hover, h3 a:focus, h3 a:active,
 p a:hover, p a:focus, p a:active {
-    background-image: linear-gradient(to right, var(--gray8) 0%, var(--gray8) 100%);
+    background-image: linear-gradient(to right, var(--cta) 0%, var(--cta) 100%);
+    /* background-image: linear-gradient(to right, var(--gray8) 0%, var(--gray8) 100%); */
 }
 
 time, caption {
@@ -489,12 +493,13 @@ small {
 .wrap {
     max-width: var(--max-width-wrap);
     margin: 0 auto;
-    padding: 1rem;
+    padding: 0;
 }
 
 main {
     max-width: 33rem;
     margin: 0 auto;
+    padding: 0 0.7rem;
 }
 
 main * + * {
@@ -525,6 +530,40 @@ li, dt, dd, br, th, td, li ul {
     margin-top: -1rem;
 }
 
+.header {
+    background-color: #444;
+    margin-bottom: 1.5rem;
+    color: var(--gray0);
+    padding: 0.7rem;
+}
+
+.master-title {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.header a, .header a:visited, .header a:active {
+    color: var(--gray0);
+    text-decoration: none;
+    text-shadow: 0.07em 0 0 #444, -0.07em 0 0 #444,
+    0 0.07em 0 #444, 0 -0.07em 0 #444, 0.1em 0 0 #444, -0.1em 0 0 #444, 0 0.1em 0 #444, 0 -0.1em 0 #444;
+    background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
+    background-repeat: repeat-x; background-position: bottom 0.04em center; background-size: 100% 0.07em;
+}
+
+.header a:hover, .header a:focus {
+    color: var(--gray0);
+    text-decoration: none;
+    text-shadow: 0.07em 0 0 #444, -0.07em 0 0 #444,
+    0 0.07em 0 #444, 0 -0.07em 0 #444, 0.1em 0 0 #444, -0.1em 0 0 #444, 0 0.1em 0 #444, 0 -0.1em 0 #444;
+    background-image: linear-gradient(to right, var(--cta) 0%, var(--cta) 100%);
+    background-repeat: repeat-x; background-position: bottom 0.04em center; background-size: 100% 0.07em;
+}
+
+.header a.active {
+    background-image: linear-gradient(to right, var(--cta) 0%, var(--cta) 100%);
+}
 /* ========================================================================
     Posts
 ======================================================================== */ 
@@ -549,8 +588,65 @@ p a img {
 
 .post-title {
     text-align: center;
+    margin-bottom: -0.2rem;
 }
 
+.post-date {
+    margin-bottom: 1.5rem;
+    display: block;
+    margin-top: 0;
+    text-align: center;
+}
+
+.post-metadata p {
+    margin: 0;
+    font-size: 0.867rem;
+}
+
+.post-metadata .post-category {
+    font-size: 1.5rem;
+}
+
+.post-metadata .post-tags {
+    font-size: 0.7rem;
+}
+
+.related-posts {
+    margin-top: 0;
+}
+
+.navigation-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.navigation-links div {
+    text-align: center;
+    margin: 0;
+}
+
+nav {
+    margin: 0 auto;
+    max-width: var(--max-width-content);
+}
+
+nav > ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: var(--gray0);
+    margin: 0;
+}
+
+.nav-item {
+    list-style-type: none;
+}
+
+nav a {
+    color: var(--gray0);
+}
 /* ========================================================================
     Utilities
 ======================================================================== */ 

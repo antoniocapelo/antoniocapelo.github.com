@@ -10,10 +10,11 @@
     <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
          content to avoid any CSS collisions with our real content. -->
     <div class="wrap">
-     <h1 class="master-title">
-         <a href="/" title="Home">{{ site.title }}</a>
-         <small>{{ site.tagline }}</small>
-     </h1>
+        <section class="header">
+             <h1 class="master-title">{{ site.title }}<small>{{ site.tagline }}</small>
+             </h1>
+             {% include nav.html %}
+        </section>
      <a href="#content">Main Content</a>
 
       <main id="content">

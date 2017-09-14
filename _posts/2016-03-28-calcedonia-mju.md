@@ -12,7 +12,7 @@ tags:
 - calcedonia
 ---
 
-Some weeks ago I visited/climbed the['Fenda da Calcedónia'](http://www.viagensasolta.com/2013/10/caminhada-na-fenda-da-calcedonia-geres.html) with a cool gang and I took my [Olympus mju-ii](http://camerapedia.wikia.com/wiki/Olympus_mju_II) as my plus one. Here are the snapshots of this beautiful trail.
+Some weeks ago I visited/climbed the ['Fenda da Calcedónia'](http://www.viagensasolta.com/2013/10/caminhada-na-fenda-da-calcedonia-geres.html) with a cool gang and I took my [Olympus mju-ii](http://camerapedia.wikia.com/wiki/Olympus_mju_II) as my plus one. Here are the snapshots of this beautiful trail.
 
 <a href="https://www.flickr.com/photos/acapelo/26074529505/in/photostream" target="_blank" title="Fenda da Calcedónia"><img src="https://farm2.staticflickr.com/1482/26074529505_ed60283c87_c.jpg" alt="Fenda da Calcedónia"></a>
 
