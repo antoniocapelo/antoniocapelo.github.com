@@ -638,6 +638,7 @@ nav > ul {
     justify-content: space-between;
     color: var(--gray0);
     margin: 0;
+    padding: 0;
 }
 
 .nav-item {
