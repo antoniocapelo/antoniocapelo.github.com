@@ -635,7 +635,7 @@ nav {
 nav > ul {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-around;
     color: var(--gray0);
     margin: 0;
     padding: 0;
